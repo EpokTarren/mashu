@@ -1,0 +1,51 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "A .mashurc config file",
+	"description": "A configuration file for MashuJS(https://github.com/EpokTarren/mashu) documentation generation",
+	"type": "object",
+	"properties": {
+		"prefix": {
+			"description": "Prefix to use when generating examples.",
+			"type": "string"
+		},
+		"input": {
+			"description": "Path to command locations.",
+			"type": "string"
+		},
+		"output": {
+			"description": "Path to docs folder.",
+			"type": "string"
+		},
+		"readme": {
+			"description": "Path to the readme.md for the bot as a whole and will export as index.md.",
+			"type": "string"
+		},
+		"descriptions": {
+			"description": "Will include a description beneath the title if one exists in the command categories folder as README.md.",
+			"type": "boolean"
+		},
+		"descriptionReplacer": {
+			"description": "Replace build path with src path to locate README files, [\"build\", \"src\"]",
+			"type": "array",
+			"maxItems": 2,
+			"minItems": 2
+		},
+		"titles": {
+			"description": "Wheter or not to include jekyll titles.",
+			"type": "boolean"
+		},
+		"permalink": {
+			"description": "Wheter or not to include jekyll permalinks.",
+			"type": "boolean"
+		},
+		"layout": {
+			"description": "Jekyll layout for command pages.",
+			"type": "string"
+		},
+		"homeHeader": {
+			"description": "Jekyll header options for index.md such as; \"layout: home\".",
+			"type": "string"
+		}
+	},
+	"required": ["prefix", "input", "output"]
+}

@@ -1,0 +1,7 @@
+{
+	"entryPoints": ["src/index.ts"],
+	"exclude": ["(commands/*|exportDocs).ts"],
+	"excludePrivate": true,
+	"excludeProtected": true,
+	"excludeExternals": true
+}
