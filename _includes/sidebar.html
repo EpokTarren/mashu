@@ -1,0 +1,21 @@
+<style>
+	main > :first-child :is(li, a, span, ul) {
+		font-size: 0.9rem;
+	}
+</style>
+<h2>Classes</h2>
+<ul>
+	{% for class in site.classes %}
+	<a href="{{ class.permalink | relative_url }}">
+		<li><span>{{ class.title }}</span></li>
+	</a>
+	{% endfor %}
+</ul>
+<h2>Interfaces</h2>
+<ul>
+	{% for interface in site.interfaces %}
+	<a href="{{ interface.permalink | relative_url }}">
+		<li><span>{{ interface.title }}</span></li>
+	</a>
+	{% endfor %}
+</ul>

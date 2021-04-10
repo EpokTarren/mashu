@@ -1,0 +1,9 @@
+title: MashuJS
+repository: https://github.com/EpokTarren/mashu
+remote_theme: 'EpokTarren/astoltoWeb'
+collections_dir: collections
+collections:
+  classes:
+    output: true
+  interfaces:
+    output: true
