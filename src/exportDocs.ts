@@ -53,7 +53,6 @@ const docs = new Documentation({ dir: input, prefix, descriptionReplacer });
 
 docs.exportDocs({
 	readme: readme && readFileSync(readme).toString(),
-	prefix,
 	output,
 	titles,
 	permalink,

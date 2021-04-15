@@ -1,19 +1,58 @@
 import { Permissions, PermissionString } from 'discord.js';
 import { Message } from './client';
 
+/**
+ * Resolvable to an example, either a string or a function that resolves to a string.
+ */
 export type ExampleResolvable = string | ((prefix: string) => string);
 
+/**
+ * Resolvable to a command.
+ */
 export interface CommandResolvable {
+	/**
+	 * Commands execution function.
+	 */
 	run: (msg: Message, args: string[]) => Promise<void> | void;
+	/**
+	 * Name of the command.
+	 */
 	name: string;
+	/**
+	 * Short description of the command.
+	 */
 	description: string;
+	/**
+	 * Wheter the command is hidden.
+	 */
 	hidden?: boolean;
+	/**
+	 * Aliases of the command.
+	 */
 	aliases?: string[];
+	/**
+	 * Category the command is in.
+	 */
 	category?: string;
+	/**
+	 * Detailed description of the command.
+	 */
 	detailed?: string;
+	/**
+	 * Examples of the command in use.
+	 */
 	examples?: ExampleResolvable[];
+	/**
+	 * If the command is avilable only in guilds.
+	 */
 	guildOnly?: boolean;
+	/**
+	 * Permissions needed to use the command.
+	 */
 	permissions?: PermissionString[];
+	/**
+	 * Permissions the bot needs to execute the command.
+	 */
 	botPermissions?: PermissionString[];
 }
 
@@ -25,39 +64,146 @@ const legible = (perm: PermissionString) =>
 		.replace('_', ' ')
 		.replace(/(^| )./g, (str) => str.toUpperCase());
 
+/**
+ * The metadata of a command.
+ */
 export interface CommandMetadata {
+	/**
+	 * Name of the command.
+	 */
 	readonly name: string;
+	/**
+	 * Short description of the command.
+	 */
 	readonly description: string;
+	/**
+	 * Aliases of the command.
+	 */
 	readonly aliases: string[];
+	/**
+	 * Category the command is in.
+	 */
 	readonly category: string;
+	/**
+	 * Detailed description of the command.
+	 */
 	readonly detailed: string;
+	/**
+	 * Examples of the command in use.
+	 */
 	readonly examples: string[];
+	/**
+	 * If the command is avilable only in guilds.
+	 */
 	readonly guildOnly: boolean;
+	/**
+	 * Permissions needed to use the command as human readable.
+	 */
 	readonly permissions: string[];
+	/**
+	 * Permissions the bot needs as human readable.
+	 */
 	readonly botPermissions: string[];
 }
 
+/**
+ * Reprsents a command.
+ * @example
+ * ```ts
+ * const max = Math.pow(2, 32);
+ * export = new Command({
+ * 	async run(message, args) {
+ * 		let n = parseInt(args[1]) || 6;
+ * 		if (n > max) n = max;
+ * 		else if (n < 2) n = 6;
+ *
+ * 		const roll = Math.floor(Math.random() * n) + 1;
+ *
+ * 		message.channel.send(`You rolled ${roll}`);
+ * 	},
+ * 	name: 'Roll',
+ * 	aliases: ['R', 'Dice', 'D'],
+ * 	description: 'Roll an n-sided die.',
+ * 	detailed: 'Roll a number between 1 and n.',
+ * 	examples: [
+ * 		(prefix) => `${prefix}roll`,
+ * 		(prefix) => `${prefix}r 1000`,
+ * 		(prefix) => `${prefix}d 1000000`,
+ * 	],
+ * });
+ *
+ * ```
+ */
 export class Command {
+	/**
+	 * Commands execution function.
+	 */
 	public readonly run: (msg: Message, args: string[]) => Promise<void>;
+	/**
+	 * Name of the command.
+	 */
 	public readonly name: string;
+	/**
+	 * Short description of the command.
+	 */
 	public readonly description: string;
 
+	/**
+	 * Help text describing the command.
+	 */
 	public readonly help: string;
+	/**
+	 * Short help text for summary viewing of the command.
+	 */
 	public readonly shortHelp: string;
 
+	/**
+	 * Aliases of the command.
+	 */
 	public readonly aliases: string[];
+	/**
+	 * Category the command is in.
+	 */
 	public readonly category: string;
+	/**
+	 * Detailed description of the command.
+	 */
 	public readonly detailed: string;
+	/**
+	 * Examples of the command in use.
+	 */
 	public readonly examples: string[];
 
+	/**
+	 * Wheter the command is hidden.
+	 */
 	public readonly hidden: boolean;
+	/**
+	 * If the command is avilable only in guilds.
+	 */
 	public readonly guildOnly: boolean;
+	/**
+	 * Permissions needed to use the command.
+	 */
 	public readonly permissions: Permissions;
+	/**
+	 * Permissions the bot needs to execute the command.
+	 */
 	public readonly botPermissions: Permissions;
 
+	/**
+	 * Permissions needed to use the command as a string.
+	 */
 	public readonly permissionsText: string;
+	/**
+	 * Permissions needed to execute the command as a string.
+	 */
 	public readonly botPermissionsText: string;
 
+	/**
+	 * Get the metadata of a comman.
+	 * @returns Metadata of the command.
+	 */
 	public metadata(): CommandMetadata {
 		return {
 			name: this.name,
@@ -72,8 +218,14 @@ export class Command {
 		};
 	}
 
-	constructor(
-		{
+	/**
+	 * Creates an instance of a command.
+	 * @param command - The commandresolvable.
+	 * @param prefix - Preifx that is currently in use.
+	 * @param directory - Name of the parent folder.
+	 */
+	constructor(command: CommandResolvable | Command, prefix = '${prefix}', directory = '') {
+		const {
 			run,
 			name,
 			description,
@@ -85,10 +237,8 @@ export class Command {
 			guildOnly = false,
 			permissions = [],
 			botPermissions = [],
-		}: CommandResolvable,
-		prefix = '${prefix}',
-		directory = ''
-	) {
+		} = command;
+
 		if (typeof run !== 'function') throw new TypeError('run is not a function.');
 		if (run.constructor.name === 'AsyncFunction') this.run = run as Command['run'];
 		else this.run = async (m, a) => run(m, a);
@@ -111,15 +261,19 @@ export class Command {
 
 		this.permissions = new Permissions(permissions);
 
-		this.permissionsText = this.permissions.bitfield
-			? permissions.map(legible).reduce(commaReduce).trim()
-			: '';
-
 		this.botPermissions = new Permissions(botPermissions);
 
-		this.botPermissionsText = this.botPermissions.bitfield
-			? botPermissions.map(legible).reduce(commaReduce).trim()
-			: '';
+		if (command.constructor.name !== 'Command') {
+			this.permissionsText = this.permissions.bitfield
+				? (permissions as PermissionString[]).map(legible).reduce(commaReduce).trim()
+				: '';
+			this.botPermissionsText = this.botPermissions.bitfield
+				? (botPermissions as PermissionString[]).map(legible).reduce(commaReduce).trim()
+				: '';
+		} else {
+			this.permissionsText = ((command as unknown) as Command).permissionsText;
+			this.botPermissionsText = ((command as unknown) as Command).botPermissionsText;
+		}
 
 		this.help =
 			`${description}\n` +

@@ -4,15 +4,45 @@ import * as Discord from 'discord.js';
 import { Client, Message } from './client';
 import { Command, CommandResolvable } from './command';
 
+/**
+ * Options for initializing a handler.
+ */
 export interface HandlerOptions {
+	/**
+	 * Directory containing commands or subfolders with commands.
+	 */
 	dir: string;
+	/**
+	 * Prefix for the bot to use.
+	 */
 	prefix: string;
+	/**
+	 * Channel for bot to log errors to.
+	 */
 	errorChannel?: string;
+	/**
+	 * Wheter to enable help command.
+	 */
 	enableHelp?: boolean;
+	/**
+	 * The ids of the bot owners.
+	 */
 	owners?: string[];
+	/**
+	 * Replacer for descriptions, replaces the first value with the second value in category path.
+	 * @example
+	 * ```ts
+	 * // descriptions are in /src/commands/ and built commands /build/commands/
+	 * // thus replace "build" with "commands"
+	 * { descriptionReplacer: ['build', 'commands'] }
+	 * ```
+	 */
 	descriptionReplacer?: [build: string, src: string];
 }
 
+/**
+ * Description and commands names of a category.
+ */
 export interface CategoryData {
 	description: string;
 	commands: string[];
@@ -29,13 +59,28 @@ interface InternalHandler extends Handler {
 	errorChannel: string;
 }
 
+/**
+ * Command handler.
+ */
 export class Handler {
+	/**
+	 * Prefix that the handler uses.
+	 */
 	public readonly prefix: string;
 
+	/**
+	 * Help data.
+	 */
 	public readonly help: Discord.MessageEmbedOptions[];
 
+	/**
+	 * The client the handler is attacheted to.
+	 */
 	public readonly client: Client;
 
+	/**
+	 * The channel to which the bot errors.
+	 */
 	public readonly errorChannel: string;
 
 	protected owners: string[];
@@ -50,6 +95,9 @@ export class Handler {
 
 	protected locations: Map<string, string>;
 
+	/**
+	 * A map of categories and their metadata.
+	 */
 	public readonly categories: Map<string, CategoryData>;
 
 	private loadCommand(path: string, parent?: string): void {
@@ -99,22 +147,39 @@ export class Handler {
 		});
 	}
 
+	/**
+	 * Reloads all commands
+	 */
 	public reloadAll(): void {
 		this.client.removeListener('message', this.handle.bind(this));
 		new Handler(this.options, this.client);
 	}
 
+	/**
+	 * Reloads a command by alias or name.
+	 * @param alias - An alias of the command to be reloaded.
+	 * @returns wheter a command was reloaded or not.
+	 */
 	public reloadCommand(alias: string): boolean {
 		const command = this.aliases.get(alias);
 		const location = this.locations.get(command as string);
 		return location ? (this.loadCommand(location), true) : false;
 	}
 
+	/**
+	 * Gets a command by name or alias.
+	 * @param alias - The name or alias of the command.
+	 * @returns A command.
+	 */
 	public getCommand(alias: string): Command | undefined {
 		const command = this.commands.get(this.aliases.get(alias) as string);
 		return command?.hidden ? undefined : command;
 	}
 
+	/**
+	 * Runs a command if the message contains a command.
+	 * @param message - The message to be handled.
+	 */
 	public async handle(message: Discord.Message): Promise<void> {
 		if (!message.content.startsWith(this.prefix)) return;
 		const args = message.content.slice(this.prefix.length).trim().split(/\s+/);
@@ -147,6 +212,10 @@ export class Handler {
 		command.run(message as Message, args).catch(this.reportError.bind(this));
 	}
 
+	/**
+	 * Reports an error to the set error channel.
+	 * @param err - Error to report.
+	 */
 	public reportError(err: Error): void {
 		if (this.errorChannel) {
 			const channel = this.client.channels.resolve(this.errorChannel) as Discord.TextChannel;
@@ -161,10 +230,20 @@ export class Handler {
 		}
 	}
 
+	/**
+	 * Check wheter a user is an owner.
+	 * @param id - ID of the user.
+	 * @returns Wheter a user is an owner.
+	 */
 	public isOwner(id: string): boolean {
 		return this.owners.includes(id);
 	}
 
+	/**
+	 * Constructs a handler instance.
+	 * @param param0 - Options for the handler.
+	 * @param client - Client that the handler will attatch to.
+	 */
 	constructor(
 		{
 			prefix,

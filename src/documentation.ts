@@ -4,37 +4,144 @@ import { Handler, HandlerOptions } from './handler';
 import { Command, CommandMetadata } from './command';
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
 
+/**
+ * Represents a command categories metadata.
+ */
 export interface CommandCategory {
+	/**
+	 * The name of the category.
+	 */
 	name: string;
+	/**
+	 * The metadata of alla commands.
+	 */
 	commands: CommandMetadata[];
+	/**
+	 * The description of the ctaegory as a whole.
+	 */
 	description?: string;
 }
 
+/**
+ * Options for exporting command categories to markdown.
+ */
 export interface MarkdownOptions {
+	/**
+	 * Wheter to include jekyll titles in export.
+	 * @example
+	 * ```ts
+	 * docs.markdown(true, true, { titles: true });
+	 * // Top of the "Moderation" category will contain the following
+	 * // ---
+	 * // title: Moderation
+	 * // ---
+	 * ```
+	 */
 	titles?: boolean;
+	/**
+	 * Wheter to include jekyll permalinks in each category.
+	 * @example
+	 * ```ts
+	 * docs.markdown(true, true, { permalink: true });
+	 * // Top of the "Moderation" category will contain the following
+	 * // ---
+	 * // permalink: /moderation/
+	 * // ---
+	 * ```
+	 */
 	permalink?: boolean;
+	/**
+	 * Wheter to include the description of a category underneath the title.
+	 */
 	descriptions?: boolean;
+	/**
+	 * Jekyll layout to be used for the command categories.
+	 * @example
+	 * ```ts
+	 * docs.markdown(true, true, { layout: 'category' });
+	 * // Top of the "Moderation" category will contain the following
+	 * // ---
+	 * // layout: category
+	 * // ---
+	 * ```
+	 */
 	layout?: string;
 }
 
+/**
+ * Options for exporting a command folders commad documentation.
+ */
 export interface MashuDocOptions extends MarkdownOptions {
-	prefix: string;
+	/**
+	 * Output directory for the documentation.
+	 */
 	output: string;
+	/**
+	 * Readme text to export as index.md.
+	 */
 	readme?: string;
+	/**
+	 * Header for readme if exported.
+	 */
 	homeHeader?: string;
 }
 
+/**
+ * Documentation cli export config options.
+ */
 export interface Mashurc extends MashuDocOptions {
+	/**
+	 * Prefix to be used in example generation.
+	 */
+	prefix: string;
+	/**
+	 * Input folder with commands to parse.
+	 */
 	input: string;
-	descriptionReplacer: [string, string];
+	/**
+	 * Replacer for descriptions, replaces the first value with the second value in category path.
+	 * @example
+	 * ```ts
+	 * // descriptions are in /src/commands/ and built commands /build/commands/
+	 * // thus replace "build" with "src"
+	 * { descriptionReplacer: ['build', 'src'] }
+	 * ```
+	 */
+	descriptionReplacer?: [string, string];
+	/**
+	 * Path to the json schema.
+	 */
 	$schema?: './node_modules/mashujs/mashurc.schema.json';
 }
 
 const listReduce = (acc: string, value: string) => `${acc}- ${value}\n`;
 
+/**
+ * Commad documentation export utility class.
+ * @example
+ * ```ts
+ * const docs = new Documentation({
+ * 	dir: 'build/commands',
+ * 	prefix: 'a;',
+ * 	descriptionReplacer: ['build', 'src'],
+ * });
+ *
+ * docs.exportDocs({
+ * 	output: 'docs',
+ * });
+ * ```
+ */
 export class Documentation extends Handler {
+	/**
+	 * Metadata for all categories sorted by name.
+	 */
 	public readonly categoryMetadata: CommandCategory[];
 
+	/**
+	 * Generate markdown for a command.
+	 * @param command - The command to convert to markdown.
+	 * @returns The metadata of a command as markdown.
+	 */
 	public commandMarkdown(command: CommandMetadata): string {
 		return [
 			`\n\n## ${command.name}`,
@@ -56,6 +163,31 @@ export class Documentation extends Handler {
 			.join('\n\n');
 	}
 
+	/**
+	 * Generates markdown for all command categories.
+	 * @param inlineTitle - Wheter to inlcude command category titles.
+	 * @param toc - Wheter to include a table of contents
+	 * @param options - Options for exporting command categories to markdown.
+	 * @returns A markdown representartion of each command category.
+	 * @example
+	 * ```ts
+	 * const docs = new Documentation({
+	 * 	dir: 'build/commands',
+	 * 	prefix: 'a;',
+	 * 	descriptionReplacer: ['build', 'src'],
+	 * });
+	 * docs
+	 * 	.markdown(true, true, {
+	 * 		titles: true,
+	 * 		permalink: true,
+	 * 		descriptions: true,
+	 * 		layout: 'category',
+	 * 	})
+	 * 	.forEach(({ name, markdown }) => {
+	 * 		writeFileSync(`docs/${name}.md`, markdown);
+	 * 	});
+	 * ```
+	 */
 	public markdown(
 		inlineTitle = true,
 		toc = true,
@@ -95,6 +227,27 @@ export class Documentation extends Handler {
 		);
 	}
 
+	/**
+	 * Exports command categories to a documentations folder.
+	 * @param options - The options for how and where to export to.
+	 * @example
+	 * ```ts
+	 * const docs = new Documentation({
+	 * 	dir: 'build/commands',
+	 * 	prefix: 'a;',
+	 * 	descriptionReplacer: ['build', 'src'],
+	 * });
+	 * docs.exportDocs({
+	 * 	output: 'docs',
+	 * 	titles: true,
+	 * 	permalink: true,
+	 * 	descriptions: true,
+	 * 	readme: readFileSync('README.md').toString(),
+	 * 	layout: 'default',
+	 * 	homeHeader: 'title: home\nlayout: home',
+	 * });
+	 * ```
+	 */
 	public exportDocs(options: MashuDocOptions): void {
 		if (!existsSync(options.output)) {
 			mkdirSync(options.output);
@@ -118,6 +271,18 @@ export class Documentation extends Handler {
 			});
 	}
 
+	/**
+	 * Creates a new documentation instance.
+	 * @param options - Handler initialization options
+	 * @example
+	 * ```ts
+	 * const docs = new Documentation({
+	 * 	dir: 'build/commands',
+	 * 	prefix: 'a;',
+	 * 	descriptionReplacer: ['build', 'src'],
+	 * });
+	 * ```
+	 */
 	constructor(options: HandlerOptions) {
 		super(options, ({} as unknown) as Client);
 
