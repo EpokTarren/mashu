@@ -30,8 +30,8 @@ layout: default
 
 ### Type aliases
 
-- [ClientOptions](/modules/#clientoptions)
-- [ExampleResolvable](/modules/#exampleresolvable)
+- [ClientOptions](/modules.md#clientoptions)
+- [ExampleResolvable](/modules.md#exampleresolvable)
 
 ## Type aliases
 
@@ -39,7 +39,9 @@ layout: default
 
 Ƭ **ClientOptions**: Discord.ClientOptions & [*HandlerOptions*](/interfaces/handleroptions/)
 
-Defined in: [client.ts:4](/https://github.com/EpokTarren/mashu/blob/5e59b19/src/client.ts#L4)
+Options used to instantiate a client.
+
+Defined in: [client.ts:7](https://github.com/EpokTarren/mashu/blob/2da2f58/src/client.ts#L7)
 
 ___
 
@@ -47,4 +49,6 @@ ___
 
 Ƭ **ExampleResolvable**: *string* \| (`prefix`: *string*) => *string*
 
-Defined in: [command.ts:4](/https://github.com/EpokTarren/mashu/blob/5e59b19/src/command.ts#L4)
+Resolvable to an example, either a string or a function that resolves to a string.
+
+Defined in: [command.ts:7](https://github.com/EpokTarren/mashu/blob/2da2f58/src/command.ts#L7)

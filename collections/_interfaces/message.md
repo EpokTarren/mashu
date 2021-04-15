@@ -1,11 +1,13 @@
 ---
 title: Message
 layout: default
-permalink: /interfaces/message/
+permalink: /message/
 ---
 [mashujs](/) / [Exports](/modules/) / Message
 
 # Interface: Message
+
+A message emitted by the command handler.
 
 ## Hierarchy
 
@@ -17,7 +19,7 @@ permalink: /interfaces/message/
 
 ### Properties
 
-- [client](/message/#client)
+- [client](/message.md#client)
 
 ## Properties
 
@@ -25,6 +27,8 @@ permalink: /interfaces/message/
 
 • **client**: [*Client*](/classes/client/)
 
+The client that emitted the message.
+
 Overrides: Discord.Message.client
 
-Defined in: [client.ts:16](/https://github.com/EpokTarren/mashu/blob/5e59b19/src/client.ts#L16)
+Defined in: [client.ts:35](https://github.com/EpokTarren/mashu/blob/2da2f58/src/client.ts#L35)

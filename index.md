@@ -5,10 +5,10 @@ layout: default
 mashujs / [Exports](/modules/)
 
 # MashuJS
-MashuJS is a command handler for [discord.js](/https://discord.js.org/#/) written in typescript for [astolto](/https://github.com/EpokTarren/astolto).
+MashuJS is a command handler for [discord.js](https://discord.js.org/#/) written in TypeScript for [astolto](https://github.com/EpokTarren/astolto).
 
 # Getting started
-The client provided is an extension of discord.js [client](/https://discord.js.org/#/docs/main/stable/class/Client) that has a handler attached.
+The client provided is an extension of discord.js [client](https://discord.js.org/#/docs/main/stable/class/Client) that has a handler attached. You can also view the [documentation page](https://mashu.tarren.moe/) for more extensive docs.
 
 ```sh
 npm install mashujs discord.js 
@@ -73,13 +73,13 @@ After that edit your config.
 - `prefix`, Prefix to use when generating examples.
 - `input`, Path to command locations.
 - `output`, Path to docs folder.
-- `readme`, Path to the readme/ for the bot as a whole and will export as index/.
-- `descriptions`, Will include a description beneath the title if one exists in the command categories folder as README/.
+- `readme`, Path to the readme.md for the bot as a whole and will export as index.md.
+- `descriptions`, Will include a description beneath the title if one exists in the command categories folder as README.md.
 - `descriptionReplacer`, Replace build path with src path to locate README files, ["build", "src"]
 - `titles`, Wheter or not to include jekyll titles.
 - `permalink`, Wheter or not to include jekyll permalinks.
 - `layout`, Jekyll layout for command pages.
-- `homeHeader`, Jekyll header options for index/ such as; "layout: home".
+- `homeHeader`, Jekyll header options for index.md such as; "layout: home".
 
 # License
-MashuJS is licensed under [MIT](/./LICENSE).
+MashuJS is licensed under [MIT](https://github.com/EpokTarren/mashu/blob/master/LICENSE).
