@@ -1,18 +1,20 @@
 const { readdirSync, readFileSync, writeFileSync } = require('fs');
 const { resolve } = require('path');
+const repoURL = require('./package.json').repository.url.replace('.git', '');
 
 const fixMD = (md) =>
 	md
-		.replace(/\.md/g, '/')
-		.replace(/]\(/g, '](/')
-		.replace(/\.\.\//g, '')
+		.replace('./LICENSE', repoURL + '/blob/master/LICENSE')
+		.replace(/\.md(?=\))/g, '/') // Remove .md from links
+		.replace(/]\((?!http)/g, '](/') // Add leading slash for local links
+		.replace(/\.\.\//g, '') // Remove directory traversal
+		.replace(/(interfaces|classes)\/(?=[^\s]+\))\//g, '') // Remove "classes/" and "interfaces/"
 		.replace(/\/README\//g, '/');
 
 function processFiles(path) {
 	const content = readFileSync(path).toString('utf-8');
 	const name = content.match(/ [^ ]+\n/)[0].trim();
-	const dir = path.match(/[^\\/]+(?=[\\/].+\.md)/g).pop();
-	const header = `---\ntitle: ${name}\nlayout: default\npermalink: /${dir}/${name.toLowerCase()}/\n---\n`;
+	const header = `---\ntitle: ${name}\nlayout: default\npermalink: /${name.toLowerCase()}/\n---\n`;
 	writeFileSync(path, header + fixMD(content));
 }
 
