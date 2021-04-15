@@ -155,6 +155,18 @@ export class Handler {
 		new Handler(this.options, this.client);
 	}
 
+	private clearCommand(name: string) {
+		const command = this.commands.get(name as string) as Command;
+		const category = this.categories.get(command.category) as CategoryData;
+
+		category.commands = category.commands.splice(category.commands.indexOf(command.name), 1);
+		this.categories.set(command.category, category);
+		this.commands.delete(command.name);
+
+		for (const alias of command.aliases.concat([command.name]))
+			this.aliases.delete(alias.toLowerCase());
+	}
+
 	/**
 	 * Reloads a command by alias or name.
 	 * @param alias - An alias of the command to be reloaded.
@@ -163,7 +175,9 @@ export class Handler {
 	public reloadCommand(alias: string): boolean {
 		const command = this.aliases.get(alias);
 		const location = this.locations.get(command as string);
-		return location ? (this.loadCommand(location), true) : false;
+		return location
+			? (this.clearCommand(command as string), this.loadCommand(location), true)
+			: false;
 	}
 
 	/**
