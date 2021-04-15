@@ -29,8 +29,8 @@ jobs:
 
           cd temp
 
-          rm -rf /collections/_classes/
-          rm -rf /collections/_interfaces/
+          rm -rf collections/_classes/
+          rm -rf collections/_interfaces/
           mv ../docs/README.md index.md
           mv ../docs/modules.md modules.md
           mv ../docs/classes collections/_classes/
