@@ -1,9 +1,8 @@
 # MashuJS
-MashuJS is a command handler for [discord.js](https://discord.js.org/#/) written in typescript for [astolto](https://github.com/EpokTarren/astolto).
+MashuJS is a command handler for [discord.js](https://discord.js.org/#/) written in TypeScript for [astolto](https://github.com/EpokTarren/astolto).
 
 # Getting started
-The client provided is an extension of discord.js [client](https://discord.js.org/#/docs/main/stable/class/Client) that has a handler attached.
-
+The client provided is an extension of discord.js [client](https://discord.js.org/#/docs/main/stable/class/Client) that has a handler attached. You can also view the [documentation page](https://mashu.tarren.moe/) for more extensive docs.
 
 ```sh
 npm install mashujs discord.js 
