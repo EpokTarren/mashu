@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { readFileSync, existsSync, writeFileSync } from 'fs';
 import { Documentation, Mashurc } from './documentation';
 
