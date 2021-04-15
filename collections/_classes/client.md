@@ -19,17 +19,17 @@ Client connected to the Disocrd api.
 
 ### Constructors
 
-- [constructor](/client.md#constructor)
+- [constructor](/client/#constructor)
 
 ### Properties
 
-- [handler](/client.md#handler)
+- [handler](/client/#handler)
 
 ## Constructors
 
 ### constructor
 
-\+ **new Client**(`options`: [*ClientOptions*](/modules.md#clientoptions)): [*Client*](/client/)
+\+ **new Client**(`options`: [*ClientOptions*](/modules/#clientoptions)): [*Client*](/client/)
 
 Instantiates a new client with a handler.
 
@@ -37,13 +37,13 @@ Instantiates a new client with a handler.
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`options` | [*ClientOptions*](/modules.md#clientoptions) | Options used to generate the handler.    |
+`options` | [*ClientOptions*](/modules/#clientoptions) | Options used to generate the handler.    |
 
 **Returns:** [*Client*](/client/)
 
 Overrides: Discord.Client.constructor
 
-Defined in: [client.ts:16](https://github.com/EpokTarren/mashu/blob/2da2f58/src/client.ts#L16)
+Defined in: [client.ts:16](https://github.com/EpokTarren/mashu/blob/97910c8/src/client.ts#L16)
 
 ## Properties
 
@@ -53,4 +53,4 @@ Defined in: [client.ts:16](https://github.com/EpokTarren/mashu/blob/2da2f58/src/
 
 The command handler that handles messages.
 
-Defined in: [client.ts:16](https://github.com/EpokTarren/mashu/blob/2da2f58/src/client.ts#L16)
+Defined in: [client.ts:16](https://github.com/EpokTarren/mashu/blob/97910c8/src/client.ts#L16)

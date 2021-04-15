@@ -21,13 +21,13 @@ Options for exporting a command folders commad documentation.
 
 ### Properties
 
-- [descriptions](/mashudocoptions.md#descriptions)
-- [homeHeader](/mashudocoptions.md#homeheader)
-- [layout](/mashudocoptions.md#layout)
-- [output](/mashudocoptions.md#output)
-- [permalink](/mashudocoptions.md#permalink)
-- [readme](/mashudocoptions.md#readme)
-- [titles](/mashudocoptions.md#titles)
+- [descriptions](/mashudocoptions/#descriptions)
+- [homeHeader](/mashudocoptions/#homeheader)
+- [layout](/mashudocoptions/#layout)
+- [output](/mashudocoptions/#output)
+- [permalink](/mashudocoptions/#permalink)
+- [readme](/mashudocoptions/#readme)
+- [titles](/mashudocoptions/#titles)
 
 ## Properties
 
@@ -37,9 +37,9 @@ Options for exporting a command folders commad documentation.
 
 Wheter to include the description of a category underneath the title.
 
-Inherited from: [MarkdownOptions](/markdownoptions/).[descriptions](/markdownoptions.md#descriptions)
+Inherited from: [MarkdownOptions](/markdownoptions/).[descriptions](/markdownoptions/#descriptions)
 
-Defined in: [documentation.ts:56](https://github.com/EpokTarren/mashu/blob/2da2f58/src/documentation.ts#L56)
+Defined in: [documentation.ts:56](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L56)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 Header for readme if exported.
 
-Defined in: [documentation.ts:86](https://github.com/EpokTarren/mashu/blob/2da2f58/src/documentation.ts#L86)
+Defined in: [documentation.ts:86](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L86)
 
 ___
 
@@ -68,9 +68,9 @@ docs.markdown(true, true, { layout: 'category' });
 // ---
 ```
 
-Inherited from: [MarkdownOptions](/markdownoptions/).[layout](/markdownoptions.md#layout)
+Inherited from: [MarkdownOptions](/markdownoptions/).[layout](/markdownoptions/#layout)
 
-Defined in: [documentation.ts:68](https://github.com/EpokTarren/mashu/blob/2da2f58/src/documentation.ts#L68)
+Defined in: [documentation.ts:68](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L68)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 Output directory for the documentation.
 
-Defined in: [documentation.ts:78](https://github.com/EpokTarren/mashu/blob/2da2f58/src/documentation.ts#L78)
+Defined in: [documentation.ts:78](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L78)
 
 ___
 
@@ -99,9 +99,9 @@ docs.markdown(true, true, { permalink: true });
 // ---
 ```
 
-Inherited from: [MarkdownOptions](/markdownoptions/).[permalink](/markdownoptions.md#permalink)
+Inherited from: [MarkdownOptions](/markdownoptions/).[permalink](/markdownoptions/#permalink)
 
-Defined in: [documentation.ts:52](https://github.com/EpokTarren/mashu/blob/2da2f58/src/documentation.ts#L52)
+Defined in: [documentation.ts:52](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L52)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 Readme text to export as index.md.
 
-Defined in: [documentation.ts:82](https://github.com/EpokTarren/mashu/blob/2da2f58/src/documentation.ts#L82)
+Defined in: [documentation.ts:82](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L82)
 
 ___
 
@@ -130,6 +130,6 @@ docs.markdown(true, true, { titles: true });
 // ---
 ```
 
-Inherited from: [MarkdownOptions](/markdownoptions/).[titles](/markdownoptions.md#titles)
+Inherited from: [MarkdownOptions](/markdownoptions/).[titles](/markdownoptions/#titles)
 
-Defined in: [documentation.ts:40](https://github.com/EpokTarren/mashu/blob/2da2f58/src/documentation.ts#L40)
+Defined in: [documentation.ts:40](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L40)

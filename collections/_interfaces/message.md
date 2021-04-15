@@ -19,7 +19,7 @@ A message emitted by the command handler.
 
 ### Properties
 
-- [client](/message.md#client)
+- [client](/message/#client)
 
 ## Properties
 
@@ -31,4 +31,4 @@ The client that emitted the message.
 
 Overrides: Discord.Message.client
 
-Defined in: [client.ts:35](https://github.com/EpokTarren/mashu/blob/2da2f58/src/client.ts#L35)
+Defined in: [client.ts:35](https://github.com/EpokTarren/mashu/blob/97910c8/src/client.ts#L35)

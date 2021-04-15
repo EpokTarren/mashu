@@ -30,8 +30,8 @@ layout: default
 
 ### Type aliases
 
-- [ClientOptions](/modules.md#clientoptions)
-- [ExampleResolvable](/modules.md#exampleresolvable)
+- [ClientOptions](/modules/#clientoptions)
+- [ExampleResolvable](/modules/#exampleresolvable)
 
 ## Type aliases
 
@@ -41,7 +41,7 @@ layout: default
 
 Options used to instantiate a client.
 
-Defined in: [client.ts:7](https://github.com/EpokTarren/mashu/blob/2da2f58/src/client.ts#L7)
+Defined in: [client.ts:7](https://github.com/EpokTarren/mashu/blob/97910c8/src/client.ts#L7)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 Resolvable to an example, either a string or a function that resolves to a string.
 
-Defined in: [command.ts:7](https://github.com/EpokTarren/mashu/blob/2da2f58/src/command.ts#L7)
+Defined in: [command.ts:7](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L7)

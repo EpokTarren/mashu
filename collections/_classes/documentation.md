@@ -32,28 +32,28 @@ docs.exportDocs({
 
 ### Constructors
 
-- [constructor](/documentation.md#constructor)
+- [constructor](/documentation/#constructor)
 
 ### Properties
 
-- [categories](/documentation.md#categories)
-- [categoryMetadata](/documentation.md#categorymetadata)
-- [client](/documentation.md#client)
-- [errorChannel](/documentation.md#errorchannel)
-- [help](/documentation.md#help)
-- [prefix](/documentation.md#prefix)
+- [categories](/documentation/#categories)
+- [categoryMetadata](/documentation/#categorymetadata)
+- [client](/documentation/#client)
+- [errorChannel](/documentation/#errorchannel)
+- [help](/documentation/#help)
+- [prefix](/documentation/#prefix)
 
 ### Methods
 
-- [commandMarkdown](/documentation.md#commandmarkdown)
-- [exportDocs](/documentation.md#exportdocs)
-- [getCommand](/documentation.md#getcommand)
-- [handle](/documentation.md#handle)
-- [isOwner](/documentation.md#isowner)
-- [markdown](/documentation.md#markdown)
-- [reloadAll](/documentation.md#reloadall)
-- [reloadCommand](/documentation.md#reloadcommand)
-- [reportError](/documentation.md#reporterror)
+- [commandMarkdown](/documentation/#commandmarkdown)
+- [exportDocs](/documentation/#exportdocs)
+- [getCommand](/documentation/#getcommand)
+- [handle](/documentation/#handle)
+- [isOwner](/documentation/#isowner)
+- [markdown](/documentation/#markdown)
+- [reloadAll](/documentation/#reloadall)
+- [reloadCommand](/documentation/#reloadcommand)
+- [reportError](/documentation/#reporterror)
 
 ## Constructors
 
@@ -82,7 +82,7 @@ Name | Type | Description |
 
 Overrides: [Handler](/handler/)
 
-Defined in: [documentation.ts:272](https://github.com/EpokTarren/mashu/blob/2da2f58/src/documentation.ts#L272)
+Defined in: [documentation.ts:272](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L272)
 
 ## Properties
 
@@ -92,9 +92,9 @@ Defined in: [documentation.ts:272](https://github.com/EpokTarren/mashu/blob/2da2
 
 A map of categories and their metadata.
 
-Inherited from: [Handler](/handler/).[categories](/handler.md#categories)
+Inherited from: [Handler](/handler/).[categories](/handler/#categories)
 
-Defined in: [handler.ts:101](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L101)
+Defined in: [handler.ts:101](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L101)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 Metadata for all categories sorted by name.
 
-Defined in: [documentation.ts:138](https://github.com/EpokTarren/mashu/blob/2da2f58/src/documentation.ts#L138)
+Defined in: [documentation.ts:138](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L138)
 
 ___
 
@@ -114,9 +114,9 @@ ___
 
 The client the handler is attacheted to.
 
-Inherited from: [Handler](/handler/).[client](/handler.md#client)
+Inherited from: [Handler](/handler/).[client](/handler/#client)
 
-Defined in: [handler.ts:79](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L79)
+Defined in: [handler.ts:79](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L79)
 
 ___
 
@@ -126,9 +126,9 @@ ___
 
 The channel to which the bot errors.
 
-Inherited from: [Handler](/handler/).[errorChannel](/handler.md#errorchannel)
+Inherited from: [Handler](/handler/).[errorChannel](/handler/#errorchannel)
 
-Defined in: [handler.ts:84](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L84)
+Defined in: [handler.ts:84](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L84)
 
 ___
 
@@ -138,9 +138,9 @@ ___
 
 Help data.
 
-Inherited from: [Handler](/handler/).[help](/handler.md#help)
+Inherited from: [Handler](/handler/).[help](/handler/#help)
 
-Defined in: [handler.ts:74](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L74)
+Defined in: [handler.ts:74](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L74)
 
 ___
 
@@ -150,9 +150,9 @@ ___
 
 Prefix that the handler uses.
 
-Inherited from: [Handler](/handler/).[prefix](/handler.md#prefix)
+Inherited from: [Handler](/handler/).[prefix](/handler/#prefix)
 
-Defined in: [handler.ts:69](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L69)
+Defined in: [handler.ts:69](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L69)
 
 ## Methods
 
@@ -172,7 +172,7 @@ Name | Type | Description |
 
 The metadata of a command as markdown.
 
-Defined in: [documentation.ts:145](https://github.com/EpokTarren/mashu/blob/2da2f58/src/documentation.ts#L145)
+Defined in: [documentation.ts:145](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L145)
 
 ___
 
@@ -208,7 +208,7 @@ Name | Type | Description |
 
 **Returns:** *void*
 
-Defined in: [documentation.ts:251](https://github.com/EpokTarren/mashu/blob/2da2f58/src/documentation.ts#L251)
+Defined in: [documentation.ts:251](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L251)
 
 ___
 
@@ -230,7 +230,7 @@ A command.
 
 Inherited from: [Handler](/handler/)
 
-Defined in: [handler.ts:188](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L188)
+Defined in: [handler.ts:188](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L188)
 
 ___
 
@@ -250,7 +250,7 @@ Name | Type | Description |
 
 Inherited from: [Handler](/handler/)
 
-Defined in: [handler.ts:197](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L197)
+Defined in: [handler.ts:197](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L197)
 
 ___
 
@@ -272,7 +272,7 @@ Wheter a user is an owner.
 
 Inherited from: [Handler](/handler/)
 
-Defined in: [handler.ts:252](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L252)
+Defined in: [handler.ts:252](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L252)
 
 ___
 
@@ -313,7 +313,7 @@ Name | Type | Default value | Description |
 
 A markdown representartion of each command category.
 
-Defined in: [documentation.ts:191](https://github.com/EpokTarren/mashu/blob/2da2f58/src/documentation.ts#L191)
+Defined in: [documentation.ts:191](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L191)
 
 ___
 
@@ -327,7 +327,7 @@ Reloads all commands
 
 Inherited from: [Handler](/handler/)
 
-Defined in: [handler.ts:153](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L153)
+Defined in: [handler.ts:153](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L153)
 
 ___
 
@@ -349,7 +349,7 @@ wheter a command was reloaded or not.
 
 Inherited from: [Handler](/handler/)
 
-Defined in: [handler.ts:175](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L175)
+Defined in: [handler.ts:175](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L175)
 
 ___
 
@@ -369,4 +369,4 @@ Name | Type | Description |
 
 Inherited from: [Handler](/handler/)
 
-Defined in: [handler.ts:233](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L233)
+Defined in: [handler.ts:233](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L233)

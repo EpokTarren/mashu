@@ -19,24 +19,24 @@ Command handler.
 
 ### Constructors
 
-- [constructor](/handler.md#constructor)
+- [constructor](/handler/#constructor)
 
 ### Properties
 
-- [categories](/handler.md#categories)
-- [client](/handler.md#client)
-- [errorChannel](/handler.md#errorchannel)
-- [help](/handler.md#help)
-- [prefix](/handler.md#prefix)
+- [categories](/handler/#categories)
+- [client](/handler/#client)
+- [errorChannel](/handler/#errorchannel)
+- [help](/handler/#help)
+- [prefix](/handler/#prefix)
 
 ### Methods
 
-- [getCommand](/handler.md#getcommand)
-- [handle](/handler.md#handle)
-- [isOwner](/handler.md#isowner)
-- [reloadAll](/handler.md#reloadall)
-- [reloadCommand](/handler.md#reloadcommand)
-- [reportError](/handler.md#reporterror)
+- [getCommand](/handler/#getcommand)
+- [handle](/handler/#handle)
+- [isOwner](/handler/#isowner)
+- [reloadAll](/handler/#reloadall)
+- [reloadCommand](/handler/#reloadcommand)
+- [reportError](/handler/#reporterror)
 
 ## Constructors
 
@@ -55,7 +55,7 @@ Name | Type | Description |
 
 **Returns:** [*Handler*](/handler/)
 
-Defined in: [handler.ts:254](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L254)
+Defined in: [handler.ts:254](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L254)
 
 ## Properties
 
@@ -65,7 +65,7 @@ Defined in: [handler.ts:254](https://github.com/EpokTarren/mashu/blob/2da2f58/sr
 
 A map of categories and their metadata.
 
-Defined in: [handler.ts:101](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L101)
+Defined in: [handler.ts:101](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L101)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 The client the handler is attacheted to.
 
-Defined in: [handler.ts:79](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L79)
+Defined in: [handler.ts:79](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L79)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 The channel to which the bot errors.
 
-Defined in: [handler.ts:84](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L84)
+Defined in: [handler.ts:84](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L84)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 Help data.
 
-Defined in: [handler.ts:74](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L74)
+Defined in: [handler.ts:74](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L74)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 Prefix that the handler uses.
 
-Defined in: [handler.ts:69](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L69)
+Defined in: [handler.ts:69](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L69)
 
 ## Methods
 
@@ -125,7 +125,7 @@ Name | Type | Description |
 
 A command.
 
-Defined in: [handler.ts:188](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L188)
+Defined in: [handler.ts:188](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L188)
 
 ___
 
@@ -143,7 +143,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<void\>
 
-Defined in: [handler.ts:197](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L197)
+Defined in: [handler.ts:197](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L197)
 
 ___
 
@@ -163,7 +163,7 @@ Name | Type | Description |
 
 Wheter a user is an owner.
 
-Defined in: [handler.ts:252](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L252)
+Defined in: [handler.ts:252](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L252)
 
 ___
 
@@ -175,7 +175,7 @@ Reloads all commands
 
 **Returns:** *void*
 
-Defined in: [handler.ts:153](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L153)
+Defined in: [handler.ts:153](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L153)
 
 ___
 
@@ -195,7 +195,7 @@ Name | Type | Description |
 
 wheter a command was reloaded or not.
 
-Defined in: [handler.ts:175](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L175)
+Defined in: [handler.ts:175](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L175)
 
 ___
 
@@ -213,4 +213,4 @@ Name | Type | Description |
 
 **Returns:** *void*
 
-Defined in: [handler.ts:233](https://github.com/EpokTarren/mashu/blob/2da2f58/src/handler.ts#L233)
+Defined in: [handler.ts:233](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L233)
