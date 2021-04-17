@@ -8,7 +8,7 @@ const fixMD = (md) =>
 		.replace(/\.md(?=\)|#)/g, '/') // Remove .md from links
 		.replace(/]\((?!http)/g, '](/') // Add leading slash for local links
 		.replace(/\.\.\//g, '') // Remove directory traversal
-		.replace(/(interfaces|classes)\/(?=[^\s]+\))\//g, '') // Remove "classes/" and "interfaces/"
+		.replace(/(interfaces|classes)\/(?=[^\s]+\/\))/g, '') // Remove "classes/" and "interfaces/"
 		.replace(/\/README\//g, '/');
 
 function processFiles(path) {
