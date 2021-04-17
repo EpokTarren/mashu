@@ -22,7 +22,7 @@ Description and commands names of a category.
 
 • **commands**: *string*[]
 
-Defined in: [handler.ts:48](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L48)
+Defined in: [handler.ts:48](https://github.com/EpokTarren/mashu/blob/a18c528/src/handler.ts#L48)
 
 ___
 
@@ -30,4 +30,4 @@ ___
 
 • **description**: *string*
 
-Defined in: [handler.ts:47](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L47)
+Defined in: [handler.ts:47](https://github.com/EpokTarren/mashu/blob/a18c528/src/handler.ts#L47)

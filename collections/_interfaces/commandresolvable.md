@@ -33,7 +33,7 @@ Resolvable to a command.
 
 Aliases of the command.
 
-Defined in: [command.ts:32](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L32)
+Defined in: [command.ts:32](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L32)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 Permissions the bot needs to execute the command.
 
-Defined in: [command.ts:56](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L56)
+Defined in: [command.ts:56](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L56)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 Category the command is in.
 
-Defined in: [command.ts:36](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L36)
+Defined in: [command.ts:36](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L36)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 Short description of the command.
 
-Defined in: [command.ts:24](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L24)
+Defined in: [command.ts:24](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L24)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 Detailed description of the command.
 
-Defined in: [command.ts:40](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L40)
+Defined in: [command.ts:40](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L40)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 Examples of the command in use.
 
-Defined in: [command.ts:44](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L44)
+Defined in: [command.ts:44](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L44)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 If the command is avilable only in guilds.
 
-Defined in: [command.ts:48](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L48)
+Defined in: [command.ts:48](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L48)
 
 ___
 
@@ -103,7 +103,7 @@ ___
 
 Wheter the command is hidden.
 
-Defined in: [command.ts:28](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L28)
+Defined in: [command.ts:28](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L28)
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 Name of the command.
 
-Defined in: [command.ts:20](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L20)
+Defined in: [command.ts:20](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L20)
 
 ___
 
@@ -123,7 +123,7 @@ ___
 
 Permissions needed to use the command.
 
-Defined in: [command.ts:52](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L52)
+Defined in: [command.ts:52](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L52)
 
 ___
 
@@ -146,6 +146,6 @@ Name | Type |
 
 **Returns:** *void* \| *Promise*<void\>
 
-Defined in: [command.ts:16](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L16)
+Defined in: [command.ts:16](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L16)
 
-Defined in: [command.ts:16](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L16)
+Defined in: [command.ts:16](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L16)

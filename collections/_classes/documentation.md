@@ -59,7 +59,7 @@ docs.exportDocs({
 
 ### constructor
 
-\+ **new Documentation**(`options`: [*HandlerOptions*](/interfaces/handleroptions/)): [*Documentation*](/documentation/)
+\+ **new Documentation**(`options`: [*HandlerOptions*](/handleroptions/)): [*Documentation*](/documentation/)
 
 Creates a new documentation instance.
 
@@ -76,35 +76,35 @@ const docs = new Documentation({
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`options` | [*HandlerOptions*](/interfaces/handleroptions/) | Handler initialization options   |
+`options` | [*HandlerOptions*](/handleroptions/) | Handler initialization options   |
 
 **Returns:** [*Documentation*](/documentation/)
 
 Overrides: [Handler](/handler/)
 
-Defined in: [documentation.ts:272](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L272)
+Defined in: [documentation.ts:272](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L272)
 
 ## Properties
 
 ### categories
 
-• `Readonly` **categories**: *Map*<string, [*CategoryData*](/interfaces/categorydata/)\>
+• `Readonly` **categories**: *Map*<string, [*CategoryData*](/categorydata/)\>
 
 A map of categories and their metadata.
 
 Inherited from: [Handler](/handler/).[categories](/handler/#categories)
 
-Defined in: [handler.ts:101](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L101)
+Defined in: [handler.ts:101](https://github.com/EpokTarren/mashu/blob/a18c528/src/handler.ts#L101)
 
 ___
 
 ### categoryMetadata
 
-• `Readonly` **categoryMetadata**: [*CommandCategory*](/interfaces/commandcategory/)[]
+• `Readonly` **categoryMetadata**: [*CommandCategory*](/commandcategory/)[]
 
 Metadata for all categories sorted by name.
 
-Defined in: [documentation.ts:138](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L138)
+Defined in: [documentation.ts:138](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L138)
 
 ___
 
@@ -116,7 +116,7 @@ The client the handler is attacheted to.
 
 Inherited from: [Handler](/handler/).[client](/handler/#client)
 
-Defined in: [handler.ts:79](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L79)
+Defined in: [handler.ts:79](https://github.com/EpokTarren/mashu/blob/a18c528/src/handler.ts#L79)
 
 ___
 
@@ -128,7 +128,7 @@ The channel to which the bot errors.
 
 Inherited from: [Handler](/handler/).[errorChannel](/handler/#errorchannel)
 
-Defined in: [handler.ts:84](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L84)
+Defined in: [handler.ts:84](https://github.com/EpokTarren/mashu/blob/a18c528/src/handler.ts#L84)
 
 ___
 
@@ -140,7 +140,7 @@ Help data.
 
 Inherited from: [Handler](/handler/).[help](/handler/#help)
 
-Defined in: [handler.ts:74](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L74)
+Defined in: [handler.ts:74](https://github.com/EpokTarren/mashu/blob/a18c528/src/handler.ts#L74)
 
 ___
 
@@ -152,13 +152,13 @@ Prefix that the handler uses.
 
 Inherited from: [Handler](/handler/).[prefix](/handler/#prefix)
 
-Defined in: [handler.ts:69](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L69)
+Defined in: [handler.ts:69](https://github.com/EpokTarren/mashu/blob/a18c528/src/handler.ts#L69)
 
 ## Methods
 
 ### commandMarkdown
 
-▸ **commandMarkdown**(`command`: [*CommandMetadata*](/interfaces/commandmetadata/)): *string*
+▸ **commandMarkdown**(`command`: [*CommandMetadata*](/commandmetadata/)): *string*
 
 Generate markdown for a command.
 
@@ -166,19 +166,19 @@ Generate markdown for a command.
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`command` | [*CommandMetadata*](/interfaces/commandmetadata/) | The command to convert to markdown.   |
+`command` | [*CommandMetadata*](/commandmetadata/) | The command to convert to markdown.   |
 
 **Returns:** *string*
 
 The metadata of a command as markdown.
 
-Defined in: [documentation.ts:145](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L145)
+Defined in: [documentation.ts:145](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L145)
 
 ___
 
 ### exportDocs
 
-▸ **exportDocs**(`options`: [*MashuDocOptions*](/interfaces/mashudocoptions/)): *void*
+▸ **exportDocs**(`options`: [*MashuDocOptions*](/mashudocoptions/)): *void*
 
 Exports command categories to a documentations folder.
 
@@ -204,11 +204,11 @@ docs.exportDocs({
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`options` | [*MashuDocOptions*](/interfaces/mashudocoptions/) | The options for how and where to export to.   |
+`options` | [*MashuDocOptions*](/mashudocoptions/) | The options for how and where to export to.   |
 
 **Returns:** *void*
 
-Defined in: [documentation.ts:251](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L251)
+Defined in: [documentation.ts:251](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L251)
 
 ___
 
@@ -230,7 +230,7 @@ A command.
 
 Inherited from: [Handler](/handler/)
 
-Defined in: [handler.ts:188](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L188)
+Defined in: [handler.ts:188](https://github.com/EpokTarren/mashu/blob/a18c528/src/handler.ts#L188)
 
 ___
 
@@ -250,7 +250,7 @@ Name | Type | Description |
 
 Inherited from: [Handler](/handler/)
 
-Defined in: [handler.ts:197](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L197)
+Defined in: [handler.ts:197](https://github.com/EpokTarren/mashu/blob/a18c528/src/handler.ts#L197)
 
 ___
 
@@ -272,13 +272,13 @@ Wheter a user is an owner.
 
 Inherited from: [Handler](/handler/)
 
-Defined in: [handler.ts:252](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L252)
+Defined in: [handler.ts:252](https://github.com/EpokTarren/mashu/blob/a18c528/src/handler.ts#L252)
 
 ___
 
 ### markdown
 
-▸ **markdown**(`inlineTitle?`: *boolean*, `toc?`: *boolean*, `options?`: [*MarkdownOptions*](/interfaces/markdownoptions/)): { `markdown`: *string* ; `name`: *string*  }[]
+▸ **markdown**(`inlineTitle?`: *boolean*, `toc?`: *boolean*, `options?`: [*MarkdownOptions*](/markdownoptions/)): { `markdown`: *string* ; `name`: *string*  }[]
 
 Generates markdown for all command categories.
 
@@ -307,13 +307,13 @@ Name | Type | Default value | Description |
 :------ | :------ | :------ | :------ |
 `inlineTitle` | *boolean* | true | Wheter to inlcude command category titles.   |
 `toc` | *boolean* | true | Wheter to include a table of contents   |
-`options` | [*MarkdownOptions*](/interfaces/markdownoptions/) | {} | Options for exporting command categories to markdown.   |
+`options` | [*MarkdownOptions*](/markdownoptions/) | {} | Options for exporting command categories to markdown.   |
 
 **Returns:** { `markdown`: *string* ; `name`: *string*  }[]
 
 A markdown representartion of each command category.
 
-Defined in: [documentation.ts:191](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L191)
+Defined in: [documentation.ts:191](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L191)
 
 ___
 
@@ -327,7 +327,7 @@ Reloads all commands
 
 Inherited from: [Handler](/handler/)
 
-Defined in: [handler.ts:153](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L153)
+Defined in: [handler.ts:153](https://github.com/EpokTarren/mashu/blob/a18c528/src/handler.ts#L153)
 
 ___
 
@@ -349,7 +349,7 @@ wheter a command was reloaded or not.
 
 Inherited from: [Handler](/handler/)
 
-Defined in: [handler.ts:175](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L175)
+Defined in: [handler.ts:175](https://github.com/EpokTarren/mashu/blob/a18c528/src/handler.ts#L175)
 
 ___
 
@@ -369,4 +369,4 @@ Name | Type | Description |
 
 Inherited from: [Handler](/handler/)
 
-Defined in: [handler.ts:233](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L233)
+Defined in: [handler.ts:233](https://github.com/EpokTarren/mashu/blob/a18c528/src/handler.ts#L233)

@@ -43,7 +43,7 @@ Name | Type | Description |
 
 Overrides: Discord.Client.constructor
 
-Defined in: [client.ts:16](https://github.com/EpokTarren/mashu/blob/97910c8/src/client.ts#L16)
+Defined in: [client.ts:16](https://github.com/EpokTarren/mashu/blob/a18c528/src/client.ts#L16)
 
 ## Properties
 
@@ -53,4 +53,4 @@ Defined in: [client.ts:16](https://github.com/EpokTarren/mashu/blob/97910c8/src/
 
 The command handler that handles messages.
 
-Defined in: [client.ts:16](https://github.com/EpokTarren/mashu/blob/97910c8/src/client.ts#L16)
+Defined in: [client.ts:16](https://github.com/EpokTarren/mashu/blob/a18c528/src/client.ts#L16)

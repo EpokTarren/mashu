@@ -25,7 +25,7 @@ Represents a command categories metadata.
 
 The metadata of alla commands.
 
-Defined in: [documentation.ts:18](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L18)
+Defined in: [documentation.ts:18](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L18)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 The description of the ctaegory as a whole.
 
-Defined in: [documentation.ts:22](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L22)
+Defined in: [documentation.ts:22](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L22)
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 The name of the category.
 
-Defined in: [documentation.ts:14](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L14)
+Defined in: [documentation.ts:14](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L14)

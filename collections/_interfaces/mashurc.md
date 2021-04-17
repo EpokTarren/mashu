@@ -39,7 +39,7 @@ Documentation cli export config options.
 
 Path to the json schema.
 
-Defined in: [documentation.ts:114](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L114)
+Defined in: [documentation.ts:114](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L114)
 
 ___
 
@@ -56,7 +56,7 @@ Replacer for descriptions, replaces the first value with the second value in cat
 { descriptionReplacer: ['build', 'src'] }
 ```
 
-Defined in: [documentation.ts:110](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L110)
+Defined in: [documentation.ts:110](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L110)
 
 ___
 
@@ -68,7 +68,7 @@ Wheter to include the description of a category underneath the title.
 
 Inherited from: [MashuDocOptions](/mashudocoptions/).[descriptions](/mashudocoptions/#descriptions)
 
-Defined in: [documentation.ts:56](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L56)
+Defined in: [documentation.ts:56](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L56)
 
 ___
 
@@ -80,7 +80,7 @@ Header for readme if exported.
 
 Inherited from: [MashuDocOptions](/mashudocoptions/).[homeHeader](/mashudocoptions/#homeheader)
 
-Defined in: [documentation.ts:86](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L86)
+Defined in: [documentation.ts:86](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L86)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 Input folder with commands to parse.
 
-Defined in: [documentation.ts:100](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L100)
+Defined in: [documentation.ts:100](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L100)
 
 ___
 
@@ -111,7 +111,7 @@ docs.markdown(true, true, { layout: 'category' });
 
 Inherited from: [MashuDocOptions](/mashudocoptions/).[layout](/mashudocoptions/#layout)
 
-Defined in: [documentation.ts:68](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L68)
+Defined in: [documentation.ts:68](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L68)
 
 ___
 
@@ -123,7 +123,7 @@ Output directory for the documentation.
 
 Inherited from: [MashuDocOptions](/mashudocoptions/).[output](/mashudocoptions/#output)
 
-Defined in: [documentation.ts:78](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L78)
+Defined in: [documentation.ts:78](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L78)
 
 ___
 
@@ -144,7 +144,7 @@ docs.markdown(true, true, { permalink: true });
 
 Inherited from: [MashuDocOptions](/mashudocoptions/).[permalink](/mashudocoptions/#permalink)
 
-Defined in: [documentation.ts:52](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L52)
+Defined in: [documentation.ts:52](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L52)
 
 ___
 
@@ -154,7 +154,7 @@ ___
 
 Prefix to be used in example generation.
 
-Defined in: [documentation.ts:96](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L96)
+Defined in: [documentation.ts:96](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L96)
 
 ___
 
@@ -166,7 +166,7 @@ Readme text to export as index.md.
 
 Inherited from: [MashuDocOptions](/mashudocoptions/).[readme](/mashudocoptions/#readme)
 
-Defined in: [documentation.ts:82](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L82)
+Defined in: [documentation.ts:82](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L82)
 
 ___
 
@@ -187,4 +187,4 @@ docs.markdown(true, true, { titles: true });
 
 Inherited from: [MashuDocOptions](/mashudocoptions/).[titles](/mashudocoptions/#titles)
 
-Defined in: [documentation.ts:40](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L40)
+Defined in: [documentation.ts:40](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L40)

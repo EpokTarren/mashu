@@ -67,7 +67,7 @@ export = new Command({
 
 ### constructor
 
-\+ **new Command**(`command`: [*CommandResolvable*](/interfaces/commandresolvable/) \| [*Command*](/command/), `prefix?`: *string*, `directory?`: *string*): [*Command*](/command/)
+\+ **new Command**(`command`: [*CommandResolvable*](/commandresolvable/) \| [*Command*](/command/), `prefix?`: *string*, `directory?`: *string*): [*Command*](/command/)
 
 Creates an instance of a command.
 
@@ -75,13 +75,13 @@ Creates an instance of a command.
 
 Name | Type | Default value | Description |
 :------ | :------ | :------ | :------ |
-`command` | [*CommandResolvable*](/interfaces/commandresolvable/) \| [*Command*](/command/) | - | The commandresolvable.   |
+`command` | [*CommandResolvable*](/commandresolvable/) \| [*Command*](/command/) | - | The commandresolvable.   |
 `prefix` | *string* | '${prefix}' | Preifx that is currently in use.   |
 `directory` | *string* | '' | Name of the parent folder.    |
 
 **Returns:** [*Command*](/command/)
 
-Defined in: [command.ts:219](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L219)
+Defined in: [command.ts:219](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L219)
 
 ## Properties
 
@@ -91,7 +91,7 @@ Defined in: [command.ts:219](https://github.com/EpokTarren/mashu/blob/97910c8/sr
 
 Aliases of the command.
 
-Defined in: [command.ts:163](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L163)
+Defined in: [command.ts:163](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L163)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 Permissions the bot needs to execute the command.
 
-Defined in: [command.ts:192](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L192)
+Defined in: [command.ts:192](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L192)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 Permissions needed to execute the command as a string.
 
-Defined in: [command.ts:201](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L201)
+Defined in: [command.ts:201](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L201)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 Category the command is in.
 
-Defined in: [command.ts:167](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L167)
+Defined in: [command.ts:167](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L167)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 Short description of the command.
 
-Defined in: [command.ts:149](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L149)
+Defined in: [command.ts:149](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L149)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 Detailed description of the command.
 
-Defined in: [command.ts:171](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L171)
+Defined in: [command.ts:171](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L171)
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 Examples of the command in use.
 
-Defined in: [command.ts:175](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L175)
+Defined in: [command.ts:175](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L175)
 
 ___
 
@@ -161,7 +161,7 @@ ___
 
 If the command is avilable only in guilds.
 
-Defined in: [command.ts:184](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L184)
+Defined in: [command.ts:184](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L184)
 
 ___
 
@@ -171,7 +171,7 @@ ___
 
 Help text describing the command.
 
-Defined in: [command.ts:154](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L154)
+Defined in: [command.ts:154](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L154)
 
 ___
 
@@ -181,7 +181,7 @@ ___
 
 Wheter the command is hidden.
 
-Defined in: [command.ts:180](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L180)
+Defined in: [command.ts:180](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L180)
 
 ___
 
@@ -191,7 +191,7 @@ ___
 
 Name of the command.
 
-Defined in: [command.ts:145](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L145)
+Defined in: [command.ts:145](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L145)
 
 ___
 
@@ -201,7 +201,7 @@ ___
 
 Permissions needed to use the command.
 
-Defined in: [command.ts:188](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L188)
+Defined in: [command.ts:188](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L188)
 
 ___
 
@@ -211,32 +211,32 @@ ___
 
 Permissions needed to use the command as a string.
 
-Defined in: [command.ts:197](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L197)
+Defined in: [command.ts:197](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L197)
 
 ___
 
 ### run
 
-• `Readonly` **run**: (`msg`: [*Message*](/interfaces/message/), `args`: *string*[]) => *Promise*<void\>
+• `Readonly` **run**: (`msg`: [*Message*](/message/), `args`: *string*[]) => *Promise*<void\>
 
 Commands execution function.
 
 #### Type declaration:
 
-▸ (`msg`: [*Message*](/interfaces/message/), `args`: *string*[]): *Promise*<void\>
+▸ (`msg`: [*Message*](/message/), `args`: *string*[]): *Promise*<void\>
 
 #### Parameters:
 
 Name | Type |
 :------ | :------ |
-`msg` | [*Message*](/interfaces/message/) |
+`msg` | [*Message*](/message/) |
 `args` | *string*[] |
 
 **Returns:** *Promise*<void\>
 
-Defined in: [command.ts:141](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L141)
+Defined in: [command.ts:141](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L141)
 
-Defined in: [command.ts:141](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L141)
+Defined in: [command.ts:141](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L141)
 
 ___
 
@@ -246,18 +246,18 @@ ___
 
 Short help text for summary viewing of the command.
 
-Defined in: [command.ts:158](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L158)
+Defined in: [command.ts:158](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L158)
 
 ## Methods
 
 ### metadata
 
-▸ **metadata**(): [*CommandMetadata*](/interfaces/commandmetadata/)
+▸ **metadata**(): [*CommandMetadata*](/commandmetadata/)
 
 Get the metadata of a comman.
 
-**Returns:** [*CommandMetadata*](/interfaces/commandmetadata/)
+**Returns:** [*CommandMetadata*](/commandmetadata/)
 
 Metadata of the command.
 
-Defined in: [command.ts:207](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L207)
+Defined in: [command.ts:207](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L207)

@@ -31,7 +31,7 @@ The metadata of a command.
 
 Aliases of the command.
 
-Defined in: [command.ts:82](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L82)
+Defined in: [command.ts:82](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L82)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 Permissions the bot needs as human readable.
 
-Defined in: [command.ts:106](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L106)
+Defined in: [command.ts:106](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L106)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 Category the command is in.
 
-Defined in: [command.ts:86](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L86)
+Defined in: [command.ts:86](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L86)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 Short description of the command.
 
-Defined in: [command.ts:78](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L78)
+Defined in: [command.ts:78](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L78)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 Detailed description of the command.
 
-Defined in: [command.ts:90](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L90)
+Defined in: [command.ts:90](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L90)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 Examples of the command in use.
 
-Defined in: [command.ts:94](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L94)
+Defined in: [command.ts:94](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L94)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 If the command is avilable only in guilds.
 
-Defined in: [command.ts:98](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L98)
+Defined in: [command.ts:98](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L98)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 Name of the command.
 
-Defined in: [command.ts:74](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L74)
+Defined in: [command.ts:74](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L74)
 
 ___
 
@@ -111,4 +111,4 @@ ___
 
 Permissions needed to use the command as human readable.
 
-Defined in: [command.ts:102](https://github.com/EpokTarren/mashu/blob/97910c8/src/command.ts#L102)
+Defined in: [command.ts:102](https://github.com/EpokTarren/mashu/blob/a18c528/src/command.ts#L102)

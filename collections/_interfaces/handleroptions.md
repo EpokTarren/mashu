@@ -35,7 +35,7 @@ Replacer for descriptions, replaces the first value with the second value in cat
 { descriptionReplacer: ['build', 'commands'] }
 ```
 
-Defined in: [handler.ts:40](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L40)
+Defined in: [handler.ts:40](https://github.com/EpokTarren/mashu/blob/a18c528/src/handler.ts#L40)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 Directory containing commands or subfolders with commands.
 
-Defined in: [handler.ts:14](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L14)
+Defined in: [handler.ts:14](https://github.com/EpokTarren/mashu/blob/a18c528/src/handler.ts#L14)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 Wheter to enable help command.
 
-Defined in: [handler.ts:26](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L26)
+Defined in: [handler.ts:26](https://github.com/EpokTarren/mashu/blob/a18c528/src/handler.ts#L26)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 Channel for bot to log errors to.
 
-Defined in: [handler.ts:22](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L22)
+Defined in: [handler.ts:22](https://github.com/EpokTarren/mashu/blob/a18c528/src/handler.ts#L22)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 The ids of the bot owners.
 
-Defined in: [handler.ts:30](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L30)
+Defined in: [handler.ts:30](https://github.com/EpokTarren/mashu/blob/a18c528/src/handler.ts#L30)
 
 ___
 
@@ -85,4 +85,4 @@ ___
 
 Prefix for the bot to use.
 
-Defined in: [handler.ts:18](https://github.com/EpokTarren/mashu/blob/97910c8/src/handler.ts#L18)
+Defined in: [handler.ts:18](https://github.com/EpokTarren/mashu/blob/a18c528/src/handler.ts#L18)

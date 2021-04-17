@@ -32,7 +32,7 @@ Options for exporting command categories to markdown.
 
 Wheter to include the description of a category underneath the title.
 
-Defined in: [documentation.ts:56](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L56)
+Defined in: [documentation.ts:56](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L56)
 
 ___
 
@@ -51,7 +51,7 @@ docs.markdown(true, true, { layout: 'category' });
 // ---
 ```
 
-Defined in: [documentation.ts:68](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L68)
+Defined in: [documentation.ts:68](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L68)
 
 ___
 
@@ -70,7 +70,7 @@ docs.markdown(true, true, { permalink: true });
 // ---
 ```
 
-Defined in: [documentation.ts:52](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L52)
+Defined in: [documentation.ts:52](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L52)
 
 ___
 
@@ -89,4 +89,4 @@ docs.markdown(true, true, { titles: true });
 // ---
 ```
 
-Defined in: [documentation.ts:40](https://github.com/EpokTarren/mashu/blob/97910c8/src/documentation.ts#L40)
+Defined in: [documentation.ts:40](https://github.com/EpokTarren/mashu/blob/a18c528/src/documentation.ts#L40)
