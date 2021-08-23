@@ -109,8 +109,7 @@ export class Handler {
 
 		this.commands.set(command.name, command);
 
-		for (const alias of command.aliases.concat([command.name]))
-			this.aliases.set(alias.toLowerCase(), command.name);
+		for (const alias of command.aliases.concat([command.name])) this.aliases.set(alias.toLowerCase(), command.name);
 
 		const category = this.categories.get(command.category) || {
 			description: command.category,
@@ -163,8 +162,7 @@ export class Handler {
 		this.categories.set(command.category, category);
 		this.commands.delete(command.name);
 
-		for (const alias of command.aliases.concat([command.name]))
-			this.aliases.delete(alias.toLowerCase());
+		for (const alias of command.aliases.concat([command.name])) this.aliases.delete(alias.toLowerCase());
 	}
 
 	/**
@@ -175,9 +173,7 @@ export class Handler {
 	public reloadCommand(alias: string): boolean {
 		const command = this.aliases.get(alias);
 		const location = this.locations.get(command as string);
-		return location
-			? (this.clearCommand(command as string), this.loadCommand(location), true)
-			: false;
+		return location ? (this.clearCommand(command as string), this.loadCommand(location), true) : false;
 	}
 
 	/**
@@ -204,21 +200,25 @@ export class Handler {
 
 		if (message.member && !message.member.permissions.has(command.permissions.bitfield)) {
 			message.channel.send({
-				embed: {
-					title: 'You lack the permissions to use that command.',
-					description: 'You need: ' + command.permissionsText,
-				},
+				embeds: [
+					{
+						title: 'You lack the permissions to use that command.',
+						description: 'You need: ' + command.permissionsText,
+					},
+				],
 			});
 			return;
 		}
 
 		if (message.guild?.me && !message.guild.me.permissions.has(command.botPermissions.bitfield)) {
 			message.channel.send({
-				embed: {
-					title: 'I lack the permissions to use that command.',
-					description: 'I need: ' + command.permissionsText,
-					footer: { text: 'If you believe this is in error contact server administrators.' },
-				},
+				embeds: [
+					{
+						title: 'I lack the permissions to use that command.',
+						description: 'I need: ' + command.permissionsText,
+						footer: { text: 'If you believe this is in error contact server administrators.' },
+					},
+				],
 			});
 			return;
 		}
@@ -235,10 +235,7 @@ export class Handler {
 			const channel = this.client.channels.resolve(this.errorChannel) as Discord.TextChannel;
 			if (channel)
 				channel.send({
-					embed: {
-						title: 'Error occured',
-						description: err.message,
-					},
+					embeds: [{ title: 'Error occured', description: err.message }],
 				});
 			else (this as InternalHandler).errorChannel = '';
 		}
@@ -259,14 +256,7 @@ export class Handler {
 	 * @param client - Client that the handler will attatch to.
 	 */
 	constructor(
-		{
-			prefix,
-			dir,
-			enableHelp,
-			errorChannel,
-			owners = [],
-			descriptionReplacer = ['', ''],
-		}: HandlerOptions,
+		{ prefix, dir, enableHelp, errorChannel, owners = [], descriptionReplacer = ['', ''] }: HandlerOptions,
 		client: Discord.Client
 	) {
 		(client as InternalClient).handler = this;

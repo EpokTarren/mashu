@@ -284,12 +284,8 @@ export class Command {
 						.reduce(listReduce, '')
 						.trim()}`
 				: '') +
-			(this.permissions
-				? `**Permissions**${this.permissions.toArray().reduce(listReduce, '')}`
-				: '') +
-			(this.botPermissions
-				? `**Bot Permissions**${this.botPermissions.toArray().reduce(listReduce, '')}`
-				: '');
+			(this.permissions ? `**Permissions**${this.permissions.toArray().reduce(listReduce, '')}` : '') +
+			(this.botPermissions ? `**Bot Permissions**${this.botPermissions.toArray().reduce(listReduce, '')}` : '');
 
 		this.shortHelp = `**${this.name}**: ${description}`;
 	}

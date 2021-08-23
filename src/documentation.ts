@@ -148,15 +148,9 @@ export class Documentation extends Handler {
 			command.guildOnly ? 'Guild Only Command' : '',
 			`### Description\n${command.detailed}`,
 			command.aliases[0] ? `### Aliases\n${command.aliases.reduce(listReduce, '')}` : '',
-			command.examples[0]
-				? `### Examples\n\`\`\`\n${command.examples.reduce((acc, v) => `${acc}\n${v}`)}\n\`\`\``
-				: '',
-			command.permissions[0]
-				? '### Permissions\n' + command.permissions.reduce(listReduce, '').trim()
-				: '',
-			command.botPermissions[0]
-				? '### Bots Permissions\n' + command.botPermissions.reduce(listReduce, '').trim()
-				: '',
+			command.examples[0] ? `### Examples\n\`\`\`\n${command.examples.reduce((acc, v) => `${acc}\n${v}`)}\n\`\`\`` : '',
+			command.permissions[0] ? '### Permissions\n' + command.permissions.reduce(listReduce, '').trim() : '',
+			command.botPermissions[0] ? '### Bots Permissions\n' + command.botPermissions.reduce(listReduce, '').trim() : '',
 			'---',
 		]
 			.filter((v) => v)
@@ -188,11 +182,7 @@ export class Documentation extends Handler {
 	 * 	});
 	 * ```
 	 */
-	public markdown(
-		inlineTitle = true,
-		toc = true,
-		options: MarkdownOptions = {}
-	): { name: string; markdown: string }[] {
+	public markdown(inlineTitle = true, toc = true, options: MarkdownOptions = {}): { name: string; markdown: string }[] {
 		return this.categoryMetadata.reduce(
 			(acc, { name, commands, description }) => [
 				...acc,
@@ -215,10 +205,7 @@ export class Documentation extends Handler {
 								? `# ${name}\n${(options.descriptions && description) || ''}\n\n`
 								: '') +
 							(toc
-								? commands.reduce(
-										(acc, { name }) => `${acc}- [${name}](#${name.toLowerCase()})\n`,
-										'### Commands\n'
-								  )
+								? commands.reduce((acc, { name }) => `${acc}- [${name}](#${name.toLowerCase()})\n`, '### Commands\n')
 								: '')
 					),
 				},
@@ -259,9 +246,7 @@ export class Documentation extends Handler {
 					? [
 							{
 								name: 'index',
-								markdown: options.homeHeader
-									? `---\n${options.homeHeader}\n---\n\n${options.readme}`
-									: options.readme,
+								markdown: options.homeHeader ? `---\n${options.homeHeader}\n---\n\n${options.readme}` : options.readme,
 							},
 					  ]
 					: []
