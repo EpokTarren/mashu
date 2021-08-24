@@ -1,59 +1,135 @@
-import { Permissions, PermissionString } from 'discord.js';
-import { Message } from './client';
+import { APIRole } from 'discord-api-types';
+import { CommandInteractionOption, Permissions, PermissionString, Role } from 'discord.js';
+import { Message, Interaction, IntractableMessage } from './client';
 
 /**
  * Resolvable to an example, either a string or a function that resolves to a string.
  */
 export type ExampleResolvable = string | ((prefix: string) => string);
 
-/**
- * Resolvable to a command.
- */
-export interface CommandResolvable {
+export type ArgumentType = 'Boolean' | 'Channel' | 'Integer' | 'Mentionable' | 'Role' | 'String' | 'User';
+
+export interface Argument {
+	name: string;
+	description: string;
+	type: ArgumentType;
+	required?: boolean;
+	choices?: { name: string; value: string | number }[];
+}
+
+export interface BaseCommand {
 	/**
 	 * Commands execution function.
 	 */
-	run: (msg: Message, args: string[]) => Promise<void> | void;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	run: (msg: any, args: string[]) => Promise<void> | void;
+
 	/**
 	 * Name of the command.
 	 */
 	name: string;
+
 	/**
 	 * Short description of the command.
 	 */
 	description: string;
+
 	/**
-	 * Wheter the command is hidden.
+	 * Whether the command is hidden.
 	 */
 	hidden?: boolean;
+
 	/**
 	 * Aliases of the command.
 	 */
 	aliases?: string[];
+
 	/**
 	 * Category the command is in.
 	 */
 	category?: string;
+
 	/**
 	 * Detailed description of the command.
 	 */
 	detailed?: string;
+
 	/**
 	 * Examples of the command in use.
 	 */
 	examples?: ExampleResolvable[];
+
 	/**
-	 * If the command is avilable only in guilds.
+	 * If the command is available only in guilds.
 	 */
 	guildOnly?: boolean;
+
+	/**
+	 * Whether the command is suitable to be a message interaction.
+	 */
+	interaction: 'off' | 'on' | 'only';
+
+	/**
+	 * Command arguments
+	 */
+	arguments?: Argument[];
+
+	/**
+	 * Whether to parse arguments for plain message command invocations.
+	 */
+	parseArgs?: boolean;
+
 	/**
 	 * Permissions needed to use the command.
 	 */
 	permissions?: PermissionString[];
+
 	/**
 	 * Permissions the bot needs to execute the command.
 	 */
 	botPermissions?: PermissionString[];
+}
+
+export interface MessageCommand extends BaseCommand {
+	run: (msg: Message, args: string[]) => Promise<void> | void;
+	interaction: 'off';
+}
+
+export type InteractionCommandArgument =
+	| boolean
+	| NonNullable<CommandInteractionOption['channel']>
+	| number
+	| NonNullable<CommandInteractionOption['member' | 'role' | 'user']>
+	| APIRole
+	| Role
+	| string
+	| NonNullable<CommandInteractionOption['user']>
+	| null;
+
+/**
+ * A command that is optionally a slash command
+ */
+export interface IntractableCommand extends BaseCommand {
+	/**
+	 * Commands execution function.
+	 */
+	run: (msg: IntractableMessage) => Promise<void> | void;
+
+	interaction: 'on';
+}
+
+/**
+ * A command that is exclusively a slash command
+ */
+export interface InteractionCommand extends BaseCommand {
+	/**
+	 * Commands execution function.
+	 */
+	run: (msg: Interaction) => Promise<void> | void;
+
+	interaction: 'only';
+
+	parseArgs?: never;
 }
 
 const commaReduce = (acc: string, perm: string) => `${acc}, ${perm}`;
@@ -72,34 +148,52 @@ export interface CommandMetadata {
 	 * Name of the command.
 	 */
 	readonly name: string;
+
 	/**
 	 * Short description of the command.
 	 */
 	readonly description: string;
+
 	/**
 	 * Aliases of the command.
 	 */
 	readonly aliases: string[];
+
 	/**
 	 * Category the command is in.
 	 */
 	readonly category: string;
+
 	/**
 	 * Detailed description of the command.
 	 */
 	readonly detailed: string;
+
 	/**
 	 * Examples of the command in use.
 	 */
 	readonly examples: string[];
+
 	/**
-	 * If the command is avilable only in guilds.
+	 * If the command is available only in guilds.
 	 */
 	readonly guildOnly: boolean;
+
+	/**
+	 * Whether the command is suitable to be a message interaction.
+	 */
+	readonly interaction: 'off' | 'on' | 'only';
+
+	/**
+	 * Interaction arguments
+	 */
+	readonly arguments: Argument[];
+
 	/**
 	 * Permissions needed to use the command as human readable.
 	 */
 	readonly permissions: string[];
+
 	/**
 	 * Permissions the bot needs as human readable.
 	 */
@@ -107,19 +201,20 @@ export interface CommandMetadata {
 }
 
 /**
- * Reprsents a command.
+ * Represents a command.
  * @example
  * ```ts
  * const max = Math.pow(2, 32);
  * export = new Command({
- * 	async run(message, args) {
- * 		let n = parseInt(args[1]) || 6;
+ * 	async run(message) {
+ * 		let n = message.options.getInteger('n') || 6;
+ *
  * 		if (n > max) n = max;
  * 		else if (n < 2) n = 6;
  *
  * 		const roll = Math.floor(Math.random() * n) + 1;
  *
- * 		message.channel.send(`You rolled ${roll}`);
+ * 		message.reply(`You rolled ${roll}`);
  * 	},
  * 	name: 'Roll',
  * 	aliases: ['R', 'Dice', 'D'],
@@ -130,6 +225,15 @@ export interface CommandMetadata {
  * 		(prefix) => `${prefix}r 1000`,
  * 		(prefix) => `${prefix}d 1000000`,
  * 	],
+ * 	arguments: [
+ * 		{
+ * 			type: 'String',
+ * 			name: 'n',
+ * 			description: 'Max roll value.',
+ * 			required: false,
+ * 		},
+ * 	],
+ * 	parseArgs: true,
  * });
  *
  * ```
@@ -138,11 +242,13 @@ export class Command {
 	/**
 	 * Commands execution function.
 	 */
-	public readonly run: (msg: Message, args: string[]) => Promise<void>;
+	public readonly run: (msg: IntractableMessage, args: InteractionCommandArgument[]) => Promise<void>;
+
 	/**
 	 * Name of the command.
 	 */
 	public readonly name: string;
+
 	/**
 	 * Short description of the command.
 	 */
@@ -152,6 +258,7 @@ export class Command {
 	 * Help text describing the command.
 	 */
 	public readonly help: string;
+
 	/**
 	 * Short help text for summary viewing of the command.
 	 */
@@ -161,27 +268,47 @@ export class Command {
 	 * Aliases of the command.
 	 */
 	public readonly aliases: string[];
+
 	/**
 	 * Category the command is in.
 	 */
 	public readonly category: string;
+
 	/**
 	 * Detailed description of the command.
 	 */
 	public readonly detailed: string;
+
 	/**
 	 * Examples of the command in use.
 	 */
 	public readonly examples: string[];
 
 	/**
-	 * Wheter the command is hidden.
+	 * Whether the command is hidden.
 	 */
 	public readonly hidden: boolean;
+
 	/**
-	 * If the command is avilable only in guilds.
+	 * If the command is available only in guilds.
 	 */
 	public readonly guildOnly: boolean;
+
+	/**
+	 * Whether the command is suitable to be a message interaction.
+	 */
+	public readonly interaction: 'off' | 'on' | 'only';
+
+	/**
+	 * Interaction arguments
+	 */
+	public readonly arguments: Argument[];
+
+	/**
+	 * Whether to parse arguments for plain message command invocations.
+	 */
+	public readonly parseArgs: boolean;
+
 	/**
 	 * Permissions needed to use the command.
 	 */
@@ -201,7 +328,7 @@ export class Command {
 	public readonly botPermissionsText: string;
 
 	/**
-	 * Get the metadata of a comman.
+	 * Get the metadata of a command.
 	 * @returns Metadata of the command.
 	 */
 	public metadata(): CommandMetadata {
@@ -213,6 +340,8 @@ export class Command {
 			detailed: this.detailed,
 			examples: this.examples,
 			guildOnly: this.guildOnly,
+			interaction: this.interaction,
+			arguments: this.arguments,
 			permissions: this.permissionsText.split(', '),
 			botPermissions: this.botPermissionsText.split(', '),
 		};
@@ -220,11 +349,15 @@ export class Command {
 
 	/**
 	 * Creates an instance of a command.
-	 * @param command - The commandresolvable.
-	 * @param prefix - Preifx that is currently in use.
+	 * @param command - The command resolvable.
+	 * @param prefix - Prefix that is currently in use.
 	 * @param directory - Name of the parent folder.
 	 */
-	constructor(command: CommandResolvable | Command, prefix = '${prefix}', directory = '') {
+	constructor(
+		command: MessageCommand | IntractableCommand | InteractionCommand | Command,
+		prefix = '${prefix}',
+		directory = ''
+	) {
 		const {
 			run,
 			name,
@@ -235,29 +368,46 @@ export class Command {
 			detailed = '',
 			examples = [],
 			guildOnly = false,
+			interaction = 'off',
+			parseArgs = false,
 			permissions = [],
 			botPermissions = [],
 		} = command;
 
 		if (typeof run !== 'function') throw new TypeError('run is not a function.');
-		if (run.constructor.name === 'AsyncFunction') this.run = run as Command['run'];
-		else this.run = async (m, a) => run(m, a);
+
 		if (typeof name !== 'string') throw new TypeError('Command name must be a string.');
+
+		if (typeof description !== 'string') throw new TypeError('Command description must be a string.');
+
+		this.run =
+			run.constructor.name === 'AsyncFunction'
+				? (run as Command['run'])
+				: async (m: IntractableMessage, a: InteractionCommandArgument[]) => (run as Command['run'])(m, a);
+
 		this.name = name;
-		if (typeof name !== 'string') throw new TypeError('Command description must be a string.');
+
 		this.description = description;
 
 		this.aliases = aliases;
+
 		this.category = directory || category;
+
 		this.detailed = detailed || description;
 
-		this.examples = examples.map((resolvable) =>
-			typeof resolvable === 'string' ? resolvable.replace('${prefix}', prefix) : resolvable(prefix)
+		this.examples = examples.map((example) =>
+			typeof example === 'string' ? example.replace('${prefix}', prefix) : example(prefix)
 		);
 
-		this.hidden = Boolean(hidden);
+		this.hidden = hidden;
 
-		this.guildOnly = Boolean(guildOnly);
+		this.guildOnly = guildOnly;
+
+		this.interaction = interaction;
+
+		this.arguments = command.arguments || [];
+
+		this.parseArgs = parseArgs;
 
 		this.permissions = new Permissions(permissions);
 
@@ -271,8 +421,8 @@ export class Command {
 				? (botPermissions as PermissionString[]).map(legible).reduce(commaReduce).trim()
 				: '';
 		} else {
-			this.permissionsText = ((command as unknown) as Command).permissionsText;
-			this.botPermissionsText = ((command as unknown) as Command).botPermissionsText;
+			this.permissionsText = (command as Command).permissionsText;
+			this.botPermissionsText = (command as Command).botPermissionsText;
 		}
 
 		this.help =
@@ -284,8 +434,10 @@ export class Command {
 						.reduce(listReduce, '')
 						.trim()}`
 				: '') +
-			(this.permissions ? `**Permissions**${this.permissions.toArray().reduce(listReduce, '')}` : '') +
-			(this.botPermissions ? `**Bot Permissions**${this.botPermissions.toArray().reduce(listReduce, '')}` : '');
+			(this.permissions.bitfield ? `\n**Permissions**${this.permissions.toArray().reduce(listReduce, '')}` : '') +
+			(this.botPermissions.bitfield
+				? `\n**Bot Permissions**${this.botPermissions.toArray().reduce(listReduce, '')}`
+				: '');
 
 		this.shortHelp = `**${this.name}**: ${description}`;
 	}

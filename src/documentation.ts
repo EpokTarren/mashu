@@ -146,10 +146,19 @@ export class Documentation extends Handler {
 		return [
 			`\n\n## ${command.name}`,
 			command.guildOnly ? 'Guild Only Command' : '',
-			`### Description\n${command.detailed}`,
+			`### Description\n\n${command.detailed}`,
 			command.aliases[0] ? `### Aliases\n${command.aliases.reduce(listReduce, '')}` : '',
 			command.examples[0] ? `### Examples\n\`\`\`\n${command.examples.reduce((acc, v) => `${acc}\n${v}`)}\n\`\`\`` : '',
 			command.permissions[0] ? '### Permissions\n' + command.permissions.reduce(listReduce, '').trim() : '',
+			command.arguments[0]
+				? `### Arguments\n\n${command.arguments.reduce(
+						(acc, { name, required, type, description }) =>
+							`${acc}#### ${name}(${
+								required ? 'Required ' : 'Optional'
+							})\n\nType: ${type}\nDescription: ${description})\n`,
+						''
+				  )}`
+				: '',
 			command.botPermissions[0] ? '### Bots Permissions\n' + command.botPermissions.reduce(listReduce, '').trim() : '',
 			'---',
 		]
@@ -272,7 +281,7 @@ export class Documentation extends Handler {
 		super(options, ({} as unknown) as Client);
 
 		this.categoryMetadata = Array.from(this.categories, ([name, category]) => ({
-			name: name || 'Uncategorized ',
+			name: name || 'None ',
 			commands: category.commands
 				.map((command) => (this.commands.get(command) as Command).metadata())
 				.sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0)),
