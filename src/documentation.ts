@@ -13,11 +13,11 @@ export interface CommandCategory {
 	 */
 	name: string;
 	/**
-	 * The metadata of alla commands.
+	 * The metadata of all commands.
 	 */
 	commands: CommandMetadata[];
 	/**
-	 * The description of the ctaegory as a whole.
+	 * The description of the category as a whole.
 	 */
 	description?: string;
 }
@@ -27,7 +27,7 @@ export interface CommandCategory {
  */
 export interface MarkdownOptions {
 	/**
-	 * Wheter to include jekyll titles in export.
+	 * Whether to include jekyll titles in export.
 	 * @example
 	 * ```ts
 	 * docs.markdown(true, true, { titles: true });
@@ -39,7 +39,7 @@ export interface MarkdownOptions {
 	 */
 	titles?: boolean;
 	/**
-	 * Wheter to include jekyll permalinks in each category.
+	 * Whether to include jekyll permalinks in each category.
 	 * @example
 	 * ```ts
 	 * docs.markdown(true, true, { permalink: true });
@@ -51,7 +51,7 @@ export interface MarkdownOptions {
 	 */
 	permalink?: boolean;
 	/**
-	 * Wheter to include the description of a category underneath the title.
+	 * Whether to include the description of a category underneath the title.
 	 */
 	descriptions?: boolean;
 	/**
@@ -69,7 +69,7 @@ export interface MarkdownOptions {
 }
 
 /**
- * Options for exporting a command folders commad documentation.
+ * Options for exporting a command folders command documentation.
  */
 export interface MashuDocOptions extends MarkdownOptions {
 	/**
@@ -117,7 +117,7 @@ export interface Mashurc extends MashuDocOptions {
 const listReduce = (acc: string, value: string) => `${acc}- ${value}\n`;
 
 /**
- * Commad documentation export utility class.
+ * Command documentation export utility class.
  * @example
  * ```ts
  * const docs = new Documentation({
@@ -159,10 +159,10 @@ export class Documentation extends Handler {
 
 	/**
 	 * Generates markdown for all command categories.
-	 * @param inlineTitle - Wheter to inlcude command category titles.
-	 * @param toc - Wheter to include a table of contents
+	 * @param inlineTitle - Whether to include command category titles.
+	 * @param toc - Whether to include a table of contents
 	 * @param options - Options for exporting command categories to markdown.
-	 * @returns A markdown representartion of each command category.
+	 * @returns A markdown representation of each command category.
 	 * @example
 	 * ```ts
 	 * const docs = new Documentation({
@@ -272,7 +272,7 @@ export class Documentation extends Handler {
 		super(options, ({} as unknown) as Client);
 
 		this.categoryMetadata = Array.from(this.categories, ([name, category]) => ({
-			name: name || 'Uncategorised',
+			name: name || 'Uncategorized ',
 			commands: category.commands
 				.map((command) => (this.commands.get(command) as Command).metadata())
 				.sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0)),
