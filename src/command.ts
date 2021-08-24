@@ -227,13 +227,14 @@ export interface CommandMetadata {
  * 	],
  * 	arguments: [
  * 		{
- * 			type: 'String',
+ * 			type: 'Integer',
  * 			name: 'n',
  * 			description: 'Max roll value.',
  * 			required: false,
  * 		},
  * 	],
  * 	parseArgs: true,
+ *	interaction: 'on',
  * });
  *
  * ```
@@ -403,17 +404,19 @@ export class Command {
 
 		this.guildOnly = guildOnly;
 
+		console.log(name, interaction);
+
 		this.interaction = interaction;
 
 		this.arguments = command.arguments || [];
 
 		this.parseArgs = parseArgs;
 
-		this.permissions = new Permissions(permissions);
-
-		this.botPermissions = new Permissions(botPermissions);
-
 		if (command.constructor.name !== 'Command') {
+			this.permissions = new Permissions(permissions);
+
+			this.botPermissions = new Permissions(botPermissions);
+
 			this.permissionsText = this.permissions.bitfield
 				? (permissions as PermissionString[]).map(legible).reduce(commaReduce).trim()
 				: '';
@@ -423,6 +426,8 @@ export class Command {
 		} else {
 			this.permissionsText = (command as Command).permissionsText;
 			this.botPermissionsText = (command as Command).botPermissionsText;
+			this.permissions = (command as Command).permissions;
+			this.botPermissions = (command as Command).botPermissions;
 		}
 
 		this.help =
