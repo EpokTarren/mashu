@@ -1,9 +1,11 @@
-import { CommandResolvable } from '../command';
+import { MessageCommand } from '../command';
 
-const reload: CommandResolvable = {
+const reload: MessageCommand = {
 	run: async (message, args) => {
 		if (!message.client.handler.isOwner(message.author.id)) return;
+
 		const color = Number(process.env.MASHUCOLOR) || 0xff80cc;
+
 		if (message.client.handler.reloadCommand(args[1])) {
 			message.channel.send({
 				embeds: [{ title: 'Reload complete', description: 'Reloaded command successfully', color }],
@@ -27,6 +29,7 @@ const reload: CommandResolvable = {
 	name: 'Reload',
 	description: 'Reloads a specific or all commands.',
 	hidden: true,
+	interaction: 'off',
 };
 
 export = reload;
