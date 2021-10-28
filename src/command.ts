@@ -1,5 +1,4 @@
-import { APIRole } from 'discord-api-types';
-import { CommandInteractionOption, Permissions, PermissionString, Role } from 'discord.js';
+import { Permissions, PermissionString } from 'discord.js';
 import { Message, Interaction, IntractableMessage } from './client';
 
 /**
@@ -94,17 +93,6 @@ export interface MessageCommand extends BaseCommand {
 	run: (msg: Message, args: string[]) => Promise<void> | void;
 	interaction: 'off';
 }
-
-export type InteractionCommandArgument =
-	| boolean
-	| NonNullable<CommandInteractionOption['channel']>
-	| number
-	| NonNullable<CommandInteractionOption['member' | 'role' | 'user']>
-	| APIRole
-	| Role
-	| string
-	| NonNullable<CommandInteractionOption['user']>
-	| null;
 
 /**
  * A command that is optionally a slash command
@@ -243,7 +231,7 @@ export class Command {
 	/**
 	 * Commands execution function.
 	 */
-	public readonly run: (msg: IntractableMessage, args: InteractionCommandArgument[]) => Promise<void>;
+	public readonly run: (msg: IntractableMessage, args: string[]) => Promise<void>;
 
 	/**
 	 * Name of the command.
@@ -384,7 +372,7 @@ export class Command {
 		this.run =
 			run.constructor.name === 'AsyncFunction'
 				? (run as Command['run'])
-				: async (m: IntractableMessage, a: InteractionCommandArgument[]) => (run as Command['run'])(m, a);
+				: async (m: IntractableMessage, a: string[]) => (run as Command['run'])(m, a);
 
 		this.name = name;
 
@@ -403,8 +391,6 @@ export class Command {
 		this.hidden = hidden;
 
 		this.guildOnly = guildOnly;
-
-		console.log(name, interaction);
 
 		this.interaction = interaction;
 
