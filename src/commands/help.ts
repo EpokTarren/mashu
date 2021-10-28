@@ -1,23 +1,20 @@
-import { Message } from '../client';
+import { Message, Interaction } from '../client';
 import { IntractableCommand } from '../command';
 
 const help: IntractableCommand = {
 	run: async (message) => {
 		const footer = { text: process.env.HELPFOOTER, iconURL: process.env.HELPFOOTERICON };
 		const color = process.env.MASHUCOLOR ? Number(process.env.MASHUCOLOR) : 0xff80cc;
+		const command = message.client.handler.getCommand(message.options.getString('command') ?? '');
 
-		const command = message.client.handler.getCommand(message.options.getString('command') || '');
+		if (command) message.reply({ embeds: [{ title: command.name, description: command.help, color, footer }] });
+		else {
+			message.reply({ embeds: [{ description: 'Delivering command list through direct messages.', color, footer }] });
 
-		if (command) {
-			message.reply({
-				embeds: [{ title: command.name, description: command.help, color, footer }],
-			});
-		} else {
-			message.reply({ embeds: [{ description: 'Delivering command list.', color, footer }] });
+			const user = message.client.users.resolve((message as Interaction).user?.id ?? (message as Message).author?.id);
 
-			const user = message.client.users.resolve(message.member?.user?.id || (message as Message).author?.id);
-
-			message.client.handler.help.forEach((embed) => user?.send({ embeds: [Object.assign(embed, { color, footer })] }));
+			for (const embed of message.client.handler.help)
+				await user?.send({ embeds: [Object.assign(embed, { color, footer })] });
 		}
 	},
 	name: 'Help',
