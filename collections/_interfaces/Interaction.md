@@ -34,7 +34,7 @@ Discord.CommandInteraction.channel
 
 #### Defined in
 
-[client.ts:76](https://github.com/EpokTarren/mashu/blob/922ecdf/src/client.ts#L76)
+[client.ts:76](https://github.com/EpokTarren/mashu/blob/14d28f7/src/client.ts#L76)
 
 ___
 
@@ -50,4 +50,4 @@ Discord.CommandInteraction.client
 
 #### Defined in
 
-[client.ts:75](https://github.com/EpokTarren/mashu/blob/922ecdf/src/client.ts#L75)
+[client.ts:75](https://github.com/EpokTarren/mashu/blob/14d28f7/src/client.ts#L75)

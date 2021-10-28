@@ -39,7 +39,6 @@ layout: default
 - [ArgumentType](/modules/#argumenttype)
 - [ClientOptions](/modules/#clientoptions)
 - [ExampleResolvable](/modules/#exampleresolvable)
-- [InteractionCommandArgument](/modules/#interactioncommandargument)
 - [IntractableMessage](/modules/#intractablemessage)
 
 ### Functions
@@ -54,7 +53,7 @@ layout: default
 
 #### Defined in
 
-[command.ts:10](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L10)
+[command.ts:9](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L9)
 
 ___
 
@@ -66,7 +65,7 @@ Options used to instantiate a client.
 
 #### Defined in
 
-[client.ts:7](https://github.com/EpokTarren/mashu/blob/922ecdf/src/client.ts#L7)
+[client.ts:7](https://github.com/EpokTarren/mashu/blob/14d28f7/src/client.ts#L7)
 
 ___
 
@@ -78,17 +77,7 @@ Resolvable to an example, either a string or a function that resolves to a strin
 
 #### Defined in
 
-[command.ts:8](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L8)
-
-___
-
-### InteractionCommandArgument
-
-Ƭ **InteractionCommandArgument**: `boolean` \| `NonNullable`<`CommandInteractionOption`[``"channel"``]\> \| `number` \| `NonNullable`<`CommandInteractionOption`[``"member"`` \| ``"role"`` \| ``"user"``]\> \| `APIRole` \| `Role` \| `string` \| `NonNullable`<`CommandInteractionOption`[``"user"``]\> \| ``null``
-
-#### Defined in
-
-[command.ts:98](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L98)
+[command.ts:7](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L7)
 
 ___
 
@@ -98,7 +87,7 @@ ___
 
 #### Defined in
 
-[client.ts:84](https://github.com/EpokTarren/mashu/blob/922ecdf/src/client.ts#L84)
+[client.ts:84](https://github.com/EpokTarren/mashu/blob/14d28f7/src/client.ts#L84)
 
 ## Functions
 
@@ -118,4 +107,4 @@ ___
 
 #### Defined in
 
-[client.ts:86](https://github.com/EpokTarren/mashu/blob/922ecdf/src/client.ts#L86)
+[client.ts:86](https://github.com/EpokTarren/mashu/blob/14d28f7/src/client.ts#L86)

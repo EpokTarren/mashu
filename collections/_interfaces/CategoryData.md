@@ -24,7 +24,7 @@ Description and commands names of a category.
 
 #### Defined in
 
-[handler.ts:59](https://github.com/EpokTarren/mashu/blob/922ecdf/src/handler.ts#L59)
+[handler.ts:53](https://github.com/EpokTarren/mashu/blob/14d28f7/src/handler.ts#L53)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[handler.ts:58](https://github.com/EpokTarren/mashu/blob/922ecdf/src/handler.ts#L58)
+[handler.ts:52](https://github.com/EpokTarren/mashu/blob/14d28f7/src/handler.ts#L52)

@@ -86,7 +86,7 @@ const docs = new Documentation({
 
 #### Defined in
 
-[documentation.ts:280](https://github.com/EpokTarren/mashu/blob/922ecdf/src/documentation.ts#L280)
+[documentation.ts:280](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L280)
 
 ## Properties
 
@@ -102,7 +102,7 @@ A map of categories and their metadata.
 
 #### Defined in
 
-[handler.ts:101](https://github.com/EpokTarren/mashu/blob/922ecdf/src/handler.ts#L101)
+[handler.ts:95](https://github.com/EpokTarren/mashu/blob/14d28f7/src/handler.ts#L95)
 
 ___
 
@@ -114,7 +114,7 @@ Metadata for all categories sorted by name.
 
 #### Defined in
 
-[documentation.ts:138](https://github.com/EpokTarren/mashu/blob/922ecdf/src/documentation.ts#L138)
+[documentation.ts:138](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L138)
 
 ___
 
@@ -130,7 +130,7 @@ The client the handler is attached to.
 
 #### Defined in
 
-[handler.ts:79](https://github.com/EpokTarren/mashu/blob/922ecdf/src/handler.ts#L79)
+[handler.ts:73](https://github.com/EpokTarren/mashu/blob/14d28f7/src/handler.ts#L73)
 
 ___
 
@@ -146,7 +146,7 @@ The channel to which the bot errors.
 
 #### Defined in
 
-[handler.ts:84](https://github.com/EpokTarren/mashu/blob/922ecdf/src/handler.ts#L84)
+[handler.ts:78](https://github.com/EpokTarren/mashu/blob/14d28f7/src/handler.ts#L78)
 
 ___
 
@@ -162,7 +162,7 @@ Help data.
 
 #### Defined in
 
-[handler.ts:74](https://github.com/EpokTarren/mashu/blob/922ecdf/src/handler.ts#L74)
+[handler.ts:68](https://github.com/EpokTarren/mashu/blob/14d28f7/src/handler.ts#L68)
 
 ___
 
@@ -178,7 +178,7 @@ Prefix that the handler uses.
 
 #### Defined in
 
-[handler.ts:69](https://github.com/EpokTarren/mashu/blob/922ecdf/src/handler.ts#L69)
+[handler.ts:63](https://github.com/EpokTarren/mashu/blob/14d28f7/src/handler.ts#L63)
 
 ## Methods
 
@@ -202,7 +202,7 @@ The metadata of a command as markdown.
 
 #### Defined in
 
-[documentation.ts:145](https://github.com/EpokTarren/mashu/blob/922ecdf/src/documentation.ts#L145)
+[documentation.ts:145](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L145)
 
 ___
 
@@ -242,7 +242,7 @@ docs.exportDocs({
 
 #### Defined in
 
-[documentation.ts:247](https://github.com/EpokTarren/mashu/blob/922ecdf/src/documentation.ts#L247)
+[documentation.ts:247](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L247)
 
 ___
 
@@ -270,7 +270,7 @@ A command.
 
 #### Defined in
 
-[handler.ts:199](https://github.com/EpokTarren/mashu/blob/922ecdf/src/handler.ts#L199)
+[handler.ts:193](https://github.com/EpokTarren/mashu/blob/14d28f7/src/handler.ts#L193)
 
 ___
 
@@ -296,7 +296,7 @@ Runs a command if the message contains a command.
 
 #### Defined in
 
-[handler.ts:208](https://github.com/EpokTarren/mashu/blob/922ecdf/src/handler.ts#L208)
+[handler.ts:202](https://github.com/EpokTarren/mashu/blob/14d28f7/src/handler.ts#L202)
 
 ___
 
@@ -322,7 +322,7 @@ Runs a command if the message contains a command.
 
 #### Defined in
 
-[handler.ts:460](https://github.com/EpokTarren/mashu/blob/922ecdf/src/handler.ts#L460)
+[handler.ts:435](https://github.com/EpokTarren/mashu/blob/14d28f7/src/handler.ts#L435)
 
 ___
 
@@ -350,21 +350,28 @@ Whether a user is an owner.
 
 #### Defined in
 
-[handler.ts:377](https://github.com/EpokTarren/mashu/blob/922ecdf/src/handler.ts#L377)
+[handler.ts:371](https://github.com/EpokTarren/mashu/blob/14d28f7/src/handler.ts#L371)
 
 ___
 
 ### loadSlashCommands
 
-▸ **loadSlashCommands**(`token`): `Promise`<`void`\>
+▸ **loadSlashCommands**(`token?`): `Promise`<`void`\>
 
 Init slash commands
+
+**`example`**
+```ts
+client.once('ready', () => {
+	client.handler.loadSlashCommands();
+})
+```
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `token` | `string` | Your login token |
+| `token?` | `string` | Deprecated: Your login token |
 
 #### Returns
 
@@ -376,7 +383,7 @@ Init slash commands
 
 #### Defined in
 
-[handler.ts:387](https://github.com/EpokTarren/mashu/blob/922ecdf/src/handler.ts#L387)
+[handler.ts:388](https://github.com/EpokTarren/mashu/blob/14d28f7/src/handler.ts#L388)
 
 ___
 
@@ -421,7 +428,7 @@ A markdown representation of each command category.
 
 #### Defined in
 
-[documentation.ts:194](https://github.com/EpokTarren/mashu/blob/922ecdf/src/documentation.ts#L194)
+[documentation.ts:194](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L194)
 
 ___
 
@@ -441,7 +448,7 @@ Reloads all commands
 
 #### Defined in
 
-[handler.ts:167](https://github.com/EpokTarren/mashu/blob/922ecdf/src/handler.ts#L167)
+[handler.ts:161](https://github.com/EpokTarren/mashu/blob/14d28f7/src/handler.ts#L161)
 
 ___
 
@@ -469,7 +476,7 @@ whether a command was reloaded or not.
 
 #### Defined in
 
-[handler.ts:188](https://github.com/EpokTarren/mashu/blob/922ecdf/src/handler.ts#L188)
+[handler.ts:182](https://github.com/EpokTarren/mashu/blob/14d28f7/src/handler.ts#L182)
 
 ___
 
@@ -495,4 +502,4 @@ Reports an error to the set error channel.
 
 #### Defined in
 
-[handler.ts:363](https://github.com/EpokTarren/mashu/blob/922ecdf/src/handler.ts#L363)
+[handler.ts:357](https://github.com/EpokTarren/mashu/blob/14d28f7/src/handler.ts#L357)

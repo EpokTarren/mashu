@@ -95,7 +95,7 @@ Creates an instance of a command.
 
 #### Defined in
 
-[command.ts:357](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L357)
+[command.ts:345](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L345)
 
 ## Properties
 
@@ -107,7 +107,7 @@ Aliases of the command.
 
 #### Defined in
 
-[command.ts:271](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L271)
+[command.ts:259](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L259)
 
 ___
 
@@ -119,7 +119,7 @@ Interaction arguments
 
 #### Defined in
 
-[command.ts:306](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L306)
+[command.ts:294](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L294)
 
 ___
 
@@ -131,7 +131,7 @@ Permissions the bot needs to execute the command.
 
 #### Defined in
 
-[command.ts:320](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L320)
+[command.ts:308](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L308)
 
 ___
 
@@ -143,7 +143,7 @@ Permissions needed to execute the command as a string.
 
 #### Defined in
 
-[command.ts:329](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L329)
+[command.ts:317](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L317)
 
 ___
 
@@ -155,7 +155,7 @@ Category the command is in.
 
 #### Defined in
 
-[command.ts:276](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L276)
+[command.ts:264](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L264)
 
 ___
 
@@ -167,7 +167,7 @@ Short description of the command.
 
 #### Defined in
 
-[command.ts:256](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L256)
+[command.ts:244](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L244)
 
 ___
 
@@ -179,7 +179,7 @@ Detailed description of the command.
 
 #### Defined in
 
-[command.ts:281](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L281)
+[command.ts:269](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L269)
 
 ___
 
@@ -191,7 +191,7 @@ Examples of the command in use.
 
 #### Defined in
 
-[command.ts:286](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L286)
+[command.ts:274](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L274)
 
 ___
 
@@ -203,7 +203,7 @@ If the command is available only in guilds.
 
 #### Defined in
 
-[command.ts:296](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L296)
+[command.ts:284](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L284)
 
 ___
 
@@ -215,7 +215,7 @@ Help text describing the command.
 
 #### Defined in
 
-[command.ts:261](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L261)
+[command.ts:249](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L249)
 
 ___
 
@@ -227,7 +227,7 @@ Whether the command is hidden.
 
 #### Defined in
 
-[command.ts:291](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L291)
+[command.ts:279](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L279)
 
 ___
 
@@ -239,7 +239,7 @@ Whether the command is suitable to be a message interaction.
 
 #### Defined in
 
-[command.ts:301](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L301)
+[command.ts:289](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L289)
 
 ___
 
@@ -251,7 +251,7 @@ Name of the command.
 
 #### Defined in
 
-[command.ts:251](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L251)
+[command.ts:239](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L239)
 
 ___
 
@@ -263,7 +263,7 @@ Whether to parse arguments for plain message command invocations.
 
 #### Defined in
 
-[command.ts:311](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L311)
+[command.ts:299](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L299)
 
 ___
 
@@ -275,7 +275,7 @@ Permissions needed to use the command.
 
 #### Defined in
 
-[command.ts:316](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L316)
+[command.ts:304](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L304)
 
 ___
 
@@ -287,13 +287,13 @@ Permissions needed to use the command as a string.
 
 #### Defined in
 
-[command.ts:325](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L325)
+[command.ts:313](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L313)
 
 ___
 
 ### run
 
-• `Readonly` **run**: (`msg`: [`IntractableMessage`](/modules/#intractablemessage), `args`: [`InteractionCommandArgument`](/modules/#interactioncommandargument)[]) => `Promise`<`void`\>
+• `Readonly` **run**: (`msg`: [`IntractableMessage`](/modules/#intractablemessage), `args`: `string`[]) => `Promise`<`void`\>
 
 Commands execution function.
 
@@ -308,7 +308,7 @@ Commands execution function.
 | Name | Type |
 | :------ | :------ |
 | `msg` | [`IntractableMessage`](/modules/#intractablemessage) |
-| `args` | [`InteractionCommandArgument`](/modules/#interactioncommandargument)[] |
+| `args` | `string`[] |
 
 ##### Returns
 
@@ -316,7 +316,7 @@ Commands execution function.
 
 #### Defined in
 
-[command.ts:246](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L246)
+[command.ts:234](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L234)
 
 ___
 
@@ -328,7 +328,7 @@ Short help text for summary viewing of the command.
 
 #### Defined in
 
-[command.ts:266](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L266)
+[command.ts:254](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L254)
 
 ## Methods
 
@@ -346,4 +346,4 @@ Metadata of the command.
 
 #### Defined in
 
-[command.ts:335](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L335)
+[command.ts:323](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L323)

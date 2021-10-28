@@ -43,7 +43,7 @@ Whether to include the description of a category underneath the title.
 
 #### Defined in
 
-[documentation.ts:56](https://github.com/EpokTarren/mashu/blob/922ecdf/src/documentation.ts#L56)
+[documentation.ts:56](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L56)
 
 ___
 
@@ -55,7 +55,7 @@ Header for readme if exported.
 
 #### Defined in
 
-[documentation.ts:86](https://github.com/EpokTarren/mashu/blob/922ecdf/src/documentation.ts#L86)
+[documentation.ts:86](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L86)
 
 ___
 
@@ -80,7 +80,7 @@ docs.markdown(true, true, { layout: 'category' });
 
 #### Defined in
 
-[documentation.ts:68](https://github.com/EpokTarren/mashu/blob/922ecdf/src/documentation.ts#L68)
+[documentation.ts:68](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L68)
 
 ___
 
@@ -92,7 +92,7 @@ Output directory for the documentation.
 
 #### Defined in
 
-[documentation.ts:78](https://github.com/EpokTarren/mashu/blob/922ecdf/src/documentation.ts#L78)
+[documentation.ts:78](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L78)
 
 ___
 
@@ -117,7 +117,7 @@ docs.markdown(true, true, { permalink: true });
 
 #### Defined in
 
-[documentation.ts:52](https://github.com/EpokTarren/mashu/blob/922ecdf/src/documentation.ts#L52)
+[documentation.ts:52](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L52)
 
 ___
 
@@ -129,7 +129,7 @@ Readme text to export as index.md.
 
 #### Defined in
 
-[documentation.ts:82](https://github.com/EpokTarren/mashu/blob/922ecdf/src/documentation.ts#L82)
+[documentation.ts:82](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L82)
 
 ___
 
@@ -154,4 +154,4 @@ docs.markdown(true, true, { titles: true });
 
 #### Defined in
 
-[documentation.ts:40](https://github.com/EpokTarren/mashu/blob/922ecdf/src/documentation.ts#L40)
+[documentation.ts:40](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L40)

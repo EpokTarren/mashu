@@ -35,7 +35,7 @@ Aliases of the command.
 
 #### Defined in
 
-[command.ts:160](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L160)
+[command.ts:148](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L148)
 
 ___
 
@@ -47,7 +47,7 @@ Interaction arguments
 
 #### Defined in
 
-[command.ts:190](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L190)
+[command.ts:178](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L178)
 
 ___
 
@@ -59,7 +59,7 @@ Permissions the bot needs as human readable.
 
 #### Defined in
 
-[command.ts:200](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L200)
+[command.ts:188](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L188)
 
 ___
 
@@ -71,7 +71,7 @@ Category the command is in.
 
 #### Defined in
 
-[command.ts:165](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L165)
+[command.ts:153](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L153)
 
 ___
 
@@ -83,7 +83,7 @@ Short description of the command.
 
 #### Defined in
 
-[command.ts:155](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L155)
+[command.ts:143](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L143)
 
 ___
 
@@ -95,7 +95,7 @@ Detailed description of the command.
 
 #### Defined in
 
-[command.ts:170](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L170)
+[command.ts:158](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L158)
 
 ___
 
@@ -107,7 +107,7 @@ Examples of the command in use.
 
 #### Defined in
 
-[command.ts:175](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L175)
+[command.ts:163](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L163)
 
 ___
 
@@ -119,7 +119,7 @@ If the command is available only in guilds.
 
 #### Defined in
 
-[command.ts:180](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L180)
+[command.ts:168](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L168)
 
 ___
 
@@ -131,7 +131,7 @@ Whether the command is suitable to be a message interaction.
 
 #### Defined in
 
-[command.ts:185](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L185)
+[command.ts:173](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L173)
 
 ___
 
@@ -143,7 +143,7 @@ Name of the command.
 
 #### Defined in
 
-[command.ts:150](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L150)
+[command.ts:138](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L138)
 
 ___
 
@@ -155,4 +155,4 @@ Permissions needed to use the command as human readable.
 
 #### Defined in
 
-[command.ts:195](https://github.com/EpokTarren/mashu/blob/922ecdf/src/command.ts#L195)
+[command.ts:183](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L183)

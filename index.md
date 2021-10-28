@@ -13,9 +13,10 @@ MashuJS is a command handler for [discord.js](https://discord.js.org/#/) written
 The client provided is an extension of discord.js [client](https://discord.js.org/#/docs/main/stable/class/Client) that has a handler attached. You can also view the [documentation page](https://mashu.tarren.moe/) for more extensive docs.
 
 ```sh
-npm install mashujs discord.js @discordjs/builders @discordjs/rest discord-api-types
+# with npm
+npm install mashujs discord.js
 # with yarn
-yarn add mashujs discord.js @discordjs/builders @discordjs/rest discord-api-types
+yarn add mashujs discord.js
 ```
 
 Initialise a client and pass it to a handler
@@ -33,13 +34,17 @@ const client = new Client({
 	errorChannel: 'Some channel id',
 });
 
+client.once('ready', () => {
+	client.handler.loadSlashCommands();
+});
+
 client.login('your bot token');
 ```
 
 Simple example command
 
 ```ts
-const max = Math.pow(2, 32);
+const max = 1 << 32;
 export = new Command({
 	async run(message) {
 		let n = message.options.getInteger('n') || 6;
@@ -71,11 +76,12 @@ export = new Command({
 
 You can set some environment variables to change the styling of output
 
-```js
+```ts
 process.env.HELPFOOTER; // Footer text for help command
 process.env.HELPFOOTERICON; // Footer icon for help command
 process.env.MASHUCOLOR; // Default color for built in commands default "0xff80cc"
 process.env.MASHUERRORCOLOR; // Error color for built in error logging default "0xff8080"
+process.env.MASHUDEBUGGUILD; // Guild to limit testing of slash command pushes to, default is undefined
 ```
 
 # Docs generation

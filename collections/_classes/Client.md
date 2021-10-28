@@ -49,7 +49,7 @@ Discord.Client.constructor
 
 #### Defined in
 
-[client.ts:30](https://github.com/EpokTarren/mashu/blob/922ecdf/src/client.ts#L30)
+[client.ts:30](https://github.com/EpokTarren/mashu/blob/14d28f7/src/client.ts#L30)
 
 ## Properties
 
@@ -61,7 +61,7 @@ The command handler that handles messages.
 
 #### Defined in
 
-[client.ts:16](https://github.com/EpokTarren/mashu/blob/922ecdf/src/client.ts#L16)
+[client.ts:16](https://github.com/EpokTarren/mashu/blob/14d28f7/src/client.ts#L16)
 
 ## Methods
 
@@ -83,4 +83,4 @@ Init slash commands
 
 #### Defined in
 
-[client.ts:22](https://github.com/EpokTarren/mashu/blob/922ecdf/src/client.ts#L22)
+[client.ts:22](https://github.com/EpokTarren/mashu/blob/14d28f7/src/client.ts#L22)
