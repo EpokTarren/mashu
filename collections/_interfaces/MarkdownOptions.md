@@ -3,7 +3,7 @@ title: MarkdownOptions
 layout: default
 permalink: /markdownoptions/
 ---
-[mashujs](/) / [Exports](/modules/) / MarkdownOptions
+[mashujs](/readme/) / [Exports](/modules/) / MarkdownOptions
 
 # Interface: MarkdownOptions
 
@@ -13,16 +13,16 @@ Options for exporting command categories to markdown.
 
 - **`MarkdownOptions`**
 
-  ↳ [`MashuDocOptions`](/MashuDocOptions/)
+  ↳ [`MashuDocOptions`](/mashudocoptions/)
 
 ## Table of contents
 
 ### Properties
 
-- [descriptions](/MarkdownOptions/#descriptions)
-- [layout](/MarkdownOptions/#layout)
-- [permalink](/MarkdownOptions/#permalink)
-- [titles](/MarkdownOptions/#titles)
+- [descriptions](/markdownoptions/#descriptions)
+- [layout](/markdownoptions/#layout)
+- [permalink](/markdownoptions/#permalink)
+- [titles](/markdownoptions/#titles)
 
 ## Properties
 
@@ -34,7 +34,7 @@ Whether to include the description of a category underneath the title.
 
 #### Defined in
 
-[documentation.ts:56](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L56)
+[documentation.ts:56](https://github.com/EpokTarren/mashu/blob/78d8416/src/documentation.ts#L56)
 
 ___
 
@@ -55,7 +55,7 @@ docs.markdown(true, true, { layout: 'category' });
 
 #### Defined in
 
-[documentation.ts:68](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L68)
+[documentation.ts:68](https://github.com/EpokTarren/mashu/blob/78d8416/src/documentation.ts#L68)
 
 ___
 
@@ -76,7 +76,7 @@ docs.markdown(true, true, { permalink: true });
 
 #### Defined in
 
-[documentation.ts:52](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L52)
+[documentation.ts:52](https://github.com/EpokTarren/mashu/blob/78d8416/src/documentation.ts#L52)
 
 ___
 
@@ -97,4 +97,4 @@ docs.markdown(true, true, { titles: true });
 
 #### Defined in
 
-[documentation.ts:40](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L40)
+[documentation.ts:40](https://github.com/EpokTarren/mashu/blob/78d8416/src/documentation.ts#L40)

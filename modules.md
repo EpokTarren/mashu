@@ -3,7 +3,7 @@ title: Modules
 permalink: /modules/
 layout: default
 ---
-[mashujs](/) / Exports
+[mashujs](/readme/) / Exports
 
 # mashujs
 
@@ -11,28 +11,28 @@ layout: default
 
 ### Classes
 
-- [Client](/Client/)
-- [Command](/Command/)
-- [Documentation](/Documentation/)
-- [Handler](/Handler/)
+- [Client](/client/)
+- [Command](/command/)
+- [Documentation](/documentation/)
+- [Handler](/handler/)
 
 ### Interfaces
 
-- [Argument](/Argument/)
-- [BaseCommand](/BaseCommand/)
-- [CategoryData](/CategoryData/)
-- [CommandCategory](/CommandCategory/)
-- [CommandMetadata](/CommandMetadata/)
-- [HandlerOptions](/HandlerOptions/)
-- [Interaction](/Interaction/)
-- [InteractionCommand](/InteractionCommand/)
-- [IntractableCommand](/IntractableCommand/)
-- [MarkdownOptions](/MarkdownOptions/)
-- [MashuDocOptions](/MashuDocOptions/)
-- [Mashurc](/Mashurc/)
-- [Message](/Message/)
-- [MessageCommand](/MessageCommand/)
-- [MessageOrInteraction](/MessageOrInteraction/)
+- [Argument](/argument/)
+- [BaseCommand](/basecommand/)
+- [CategoryData](/categorydata/)
+- [CommandCategory](/commandcategory/)
+- [CommandMetadata](/commandmetadata/)
+- [HandlerOptions](/handleroptions/)
+- [Interaction](/interaction/)
+- [InteractionCommand](/interactioncommand/)
+- [IntractableCommand](/intractablecommand/)
+- [MarkdownOptions](/markdownoptions/)
+- [MashuDocOptions](/mashudocoptions/)
+- [Mashurc](/mashurc/)
+- [Message](/message/)
+- [MessageCommand](/messagecommand/)
+- [MessageOrInteraction](/messageorinteraction/)
 
 ### Type aliases
 
@@ -53,19 +53,19 @@ layout: default
 
 #### Defined in
 
-[command.ts:9](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L9)
+[command.ts:9](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L9)
 
 ___
 
 ### ClientOptions
 
-Ƭ **ClientOptions**: `Discord.ClientOptions` & [`HandlerOptions`](/HandlerOptions/)
+Ƭ **ClientOptions**: `Discord.ClientOptions` & [`HandlerOptions`](/handleroptions/)
 
 Options used to instantiate a client.
 
 #### Defined in
 
-[client.ts:7](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/client.ts#L7)
+[client.ts:7](https://github.com/EpokTarren/mashu/blob/78d8416/src/client.ts#L7)
 
 ___
 
@@ -77,17 +77,17 @@ Resolvable to an example, either a string or a function that resolves to a strin
 
 #### Defined in
 
-[command.ts:7](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L7)
+[command.ts:7](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L7)
 
 ___
 
 ### IntractableMessage
 
-Ƭ **IntractableMessage**: [`Message`](/Message/) \| [`Interaction`](/Interaction/) & [`MessageOrInteraction`](/MessageOrInteraction/)
+Ƭ **IntractableMessage**: [`Message`](/message/) \| [`Interaction`](/interaction/) & [`MessageOrInteraction`](/messageorinteraction/)
 
 #### Defined in
 
-[client.ts:84](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/client.ts#L84)
+[client.ts:84](https://github.com/EpokTarren/mashu/blob/78d8416/src/client.ts#L84)
 
 ## Functions
 
@@ -99,7 +99,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `content` | [`Message`](/Message/) \| [`Interaction`](/Interaction/) |
+| `content` | [`Message`](/message/) \| [`Interaction`](/interaction/) |
 
 #### Returns
 
@@ -107,4 +107,4 @@ ___
 
 #### Defined in
 
-[client.ts:86](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/client.ts#L86)
+[client.ts:86](https://github.com/EpokTarren/mashu/blob/78d8416/src/client.ts#L86)

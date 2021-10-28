@@ -3,7 +3,7 @@ title: Message
 layout: default
 permalink: /message/
 ---
-[mashujs](/) / [Exports](/modules/) / Message
+[mashujs](/readme/) / [Exports](/modules/) / Message
 
 # Interface: Message
 
@@ -19,9 +19,9 @@ A message emitted by the command handler.
 
 ### Properties
 
-- [args](/Message/#args)
-- [client](/Message/#client)
-- [options](/Message/#options)
+- [args](/message/#args)
+- [client](/message/#client)
+- [options](/message/#options)
 
 ## Properties
 
@@ -33,13 +33,13 @@ Arguments triggered by the message
 
 #### Defined in
 
-[client.ts:48](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/client.ts#L48)
+[client.ts:48](https://github.com/EpokTarren/mashu/blob/78d8416/src/client.ts#L48)
 
 ___
 
 ### client
 
-• **client**: [`Client`](/Client/)
+• **client**: [`Client`](/client/)
 
 The client that emitted the message.
 
@@ -49,7 +49,7 @@ Discord.Message.client
 
 #### Defined in
 
-[client.ts:43](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/client.ts#L43)
+[client.ts:43](https://github.com/EpokTarren/mashu/blob/78d8416/src/client.ts#L43)
 
 ___
 
@@ -71,4 +71,4 @@ ___
 
 #### Defined in
 
-[client.ts:50](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/client.ts#L50)
+[client.ts:50](https://github.com/EpokTarren/mashu/blob/78d8416/src/client.ts#L50)

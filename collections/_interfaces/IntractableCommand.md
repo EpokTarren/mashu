@@ -3,7 +3,7 @@ title: IntractableCommand
 layout: default
 permalink: /intractablecommand/
 ---
-[mashujs](/) / [Exports](/modules/) / IntractableCommand
+[mashujs](/readme/) / [Exports](/modules/) / IntractableCommand
 
 # Interface: IntractableCommand
 
@@ -11,7 +11,7 @@ A command that is optionally a slash command
 
 ## Hierarchy
 
-- [`BaseCommand`](/BaseCommand/)
+- [`BaseCommand`](/basecommand/)
 
   ↳ **`IntractableCommand`**
 
@@ -19,23 +19,23 @@ A command that is optionally a slash command
 
 ### Properties
 
-- [aliases](/IntractableCommand/#aliases)
-- [arguments](/IntractableCommand/#arguments)
-- [botPermissions](/IntractableCommand/#botpermissions)
-- [category](/IntractableCommand/#category)
-- [description](/IntractableCommand/#description)
-- [detailed](/IntractableCommand/#detailed)
-- [examples](/IntractableCommand/#examples)
-- [guildOnly](/IntractableCommand/#guildonly)
-- [hidden](/IntractableCommand/#hidden)
-- [interaction](/IntractableCommand/#interaction)
-- [name](/IntractableCommand/#name)
-- [parseArgs](/IntractableCommand/#parseargs)
-- [permissions](/IntractableCommand/#permissions)
+- [aliases](/intractablecommand/#aliases)
+- [arguments](/intractablecommand/#arguments)
+- [botPermissions](/intractablecommand/#botpermissions)
+- [category](/intractablecommand/#category)
+- [description](/intractablecommand/#description)
+- [detailed](/intractablecommand/#detailed)
+- [examples](/intractablecommand/#examples)
+- [guildOnly](/intractablecommand/#guildonly)
+- [hidden](/intractablecommand/#hidden)
+- [interaction](/intractablecommand/#interaction)
+- [name](/intractablecommand/#name)
+- [parseArgs](/intractablecommand/#parseargs)
+- [permissions](/intractablecommand/#permissions)
 
 ### Methods
 
-- [run](/IntractableCommand/#run)
+- [run](/intractablecommand/#run)
 
 ## Properties
 
@@ -47,27 +47,27 @@ Aliases of the command.
 
 #### Inherited from
 
-[BaseCommand](/BaseCommand/).[aliases](/BaseCommand/#aliases)
+[BaseCommand](/basecommand/).[aliases](/basecommand/#aliases)
 
 #### Defined in
 
-[command.ts:44](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L44)
+[command.ts:44](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L44)
 
 ___
 
 ### arguments
 
-• `Optional` **arguments**: [`Argument`](/Argument/)[]
+• `Optional` **arguments**: [`Argument`](/argument/)[]
 
 Command arguments
 
 #### Inherited from
 
-[BaseCommand](/BaseCommand/).[arguments](/BaseCommand/#arguments)
+[BaseCommand](/basecommand/).[arguments](/basecommand/#arguments)
 
 #### Defined in
 
-[command.ts:74](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L74)
+[command.ts:74](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L74)
 
 ___
 
@@ -79,11 +79,11 @@ Permissions the bot needs to execute the command.
 
 #### Inherited from
 
-[BaseCommand](/BaseCommand/).[botPermissions](/BaseCommand/#botpermissions)
+[BaseCommand](/basecommand/).[botPermissions](/basecommand/#botpermissions)
 
 #### Defined in
 
-[command.ts:89](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L89)
+[command.ts:89](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L89)
 
 ___
 
@@ -95,11 +95,11 @@ Category the command is in.
 
 #### Inherited from
 
-[BaseCommand](/BaseCommand/).[category](/BaseCommand/#category)
+[BaseCommand](/basecommand/).[category](/basecommand/#category)
 
 #### Defined in
 
-[command.ts:49](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L49)
+[command.ts:49](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L49)
 
 ___
 
@@ -111,11 +111,11 @@ Short description of the command.
 
 #### Inherited from
 
-[BaseCommand](/BaseCommand/).[description](/BaseCommand/#description)
+[BaseCommand](/basecommand/).[description](/basecommand/#description)
 
 #### Defined in
 
-[command.ts:34](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L34)
+[command.ts:34](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L34)
 
 ___
 
@@ -127,11 +127,11 @@ Detailed description of the command.
 
 #### Inherited from
 
-[BaseCommand](/BaseCommand/).[detailed](/BaseCommand/#detailed)
+[BaseCommand](/basecommand/).[detailed](/basecommand/#detailed)
 
 #### Defined in
 
-[command.ts:54](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L54)
+[command.ts:54](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L54)
 
 ___
 
@@ -143,11 +143,11 @@ Examples of the command in use.
 
 #### Inherited from
 
-[BaseCommand](/BaseCommand/).[examples](/BaseCommand/#examples)
+[BaseCommand](/basecommand/).[examples](/basecommand/#examples)
 
 #### Defined in
 
-[command.ts:59](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L59)
+[command.ts:59](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L59)
 
 ___
 
@@ -159,11 +159,11 @@ If the command is available only in guilds.
 
 #### Inherited from
 
-[BaseCommand](/BaseCommand/).[guildOnly](/BaseCommand/#guildonly)
+[BaseCommand](/basecommand/).[guildOnly](/basecommand/#guildonly)
 
 #### Defined in
 
-[command.ts:64](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L64)
+[command.ts:64](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L64)
 
 ___
 
@@ -175,11 +175,11 @@ Whether the command is hidden.
 
 #### Inherited from
 
-[BaseCommand](/BaseCommand/).[hidden](/BaseCommand/#hidden)
+[BaseCommand](/basecommand/).[hidden](/basecommand/#hidden)
 
 #### Defined in
 
-[command.ts:39](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L39)
+[command.ts:39](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L39)
 
 ___
 
@@ -191,11 +191,11 @@ Whether the command is suitable to be a message interaction.
 
 #### Overrides
 
-[BaseCommand](/BaseCommand/).[interaction](/BaseCommand/#interaction)
+[BaseCommand](/basecommand/).[interaction](/basecommand/#interaction)
 
 #### Defined in
 
-[command.ts:106](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L106)
+[command.ts:106](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L106)
 
 ___
 
@@ -207,11 +207,11 @@ Name of the command.
 
 #### Inherited from
 
-[BaseCommand](/BaseCommand/).[name](/BaseCommand/#name)
+[BaseCommand](/basecommand/).[name](/basecommand/#name)
 
 #### Defined in
 
-[command.ts:29](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L29)
+[command.ts:29](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L29)
 
 ___
 
@@ -223,11 +223,11 @@ Whether to parse arguments for plain message command invocations.
 
 #### Inherited from
 
-[BaseCommand](/BaseCommand/).[parseArgs](/BaseCommand/#parseargs)
+[BaseCommand](/basecommand/).[parseArgs](/basecommand/#parseargs)
 
 #### Defined in
 
-[command.ts:79](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L79)
+[command.ts:79](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L79)
 
 ___
 
@@ -239,11 +239,11 @@ Permissions needed to use the command.
 
 #### Inherited from
 
-[BaseCommand](/BaseCommand/).[permissions](/BaseCommand/#permissions)
+[BaseCommand](/basecommand/).[permissions](/basecommand/#permissions)
 
 #### Defined in
 
-[command.ts:84](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L84)
+[command.ts:84](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L84)
 
 ## Methods
 
@@ -265,8 +265,8 @@ Commands execution function.
 
 #### Overrides
 
-[BaseCommand](/BaseCommand/).[run](/BaseCommand/#run)
+[BaseCommand](/basecommand/).[run](/basecommand/#run)
 
 #### Defined in
 
-[command.ts:104](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L104)
+[command.ts:104](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L104)

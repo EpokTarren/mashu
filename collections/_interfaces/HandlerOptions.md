@@ -3,7 +3,7 @@ title: HandlerOptions
 layout: default
 permalink: /handleroptions/
 ---
-[mashujs](/) / [Exports](/modules/) / HandlerOptions
+[mashujs](/readme/) / [Exports](/modules/) / HandlerOptions
 
 # Interface: HandlerOptions
 
@@ -13,12 +13,12 @@ Options for initializing a handler.
 
 ### Properties
 
-- [descriptionReplacer](/HandlerOptions/#descriptionreplacer)
-- [dir](/HandlerOptions/#dir)
-- [enableHelp](/HandlerOptions/#enablehelp)
-- [errorChannel](/HandlerOptions/#errorchannel)
-- [owners](/HandlerOptions/#owners)
-- [prefix](/HandlerOptions/#prefix)
+- [descriptionReplacer](/handleroptions/#descriptionreplacer)
+- [dir](/handleroptions/#dir)
+- [enableHelp](/handleroptions/#enablehelp)
+- [errorChannel](/handleroptions/#errorchannel)
+- [owners](/handleroptions/#owners)
+- [prefix](/handleroptions/#prefix)
 
 ## Properties
 
@@ -37,7 +37,7 @@ Replacer for descriptions, replaces the first value with the second value in cat
 
 #### Defined in
 
-[handler.ts:45](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L45)
+[handler.ts:45](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L45)
 
 ___
 
@@ -49,7 +49,7 @@ Directory containing commands or sub folders with commands.
 
 #### Defined in
 
-[handler.ts:14](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L14)
+[handler.ts:14](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L14)
 
 ___
 
@@ -61,7 +61,7 @@ Whether to enable help command.
 
 #### Defined in
 
-[handler.ts:29](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L29)
+[handler.ts:29](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L29)
 
 ___
 
@@ -73,7 +73,7 @@ Channel for bot to log errors to.
 
 #### Defined in
 
-[handler.ts:24](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L24)
+[handler.ts:24](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L24)
 
 ___
 
@@ -85,7 +85,7 @@ The ids of the bot owners.
 
 #### Defined in
 
-[handler.ts:34](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L34)
+[handler.ts:34](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L34)
 
 ___
 
@@ -97,4 +97,4 @@ Prefix for the bot to use.
 
 #### Defined in
 
-[handler.ts:19](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L19)
+[handler.ts:19](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L19)

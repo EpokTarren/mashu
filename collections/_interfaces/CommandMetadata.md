@@ -3,7 +3,7 @@ title: CommandMetadata
 layout: default
 permalink: /commandmetadata/
 ---
-[mashujs](/) / [Exports](/modules/) / CommandMetadata
+[mashujs](/readme/) / [Exports](/modules/) / CommandMetadata
 
 # Interface: CommandMetadata
 
@@ -13,17 +13,17 @@ The metadata of a command.
 
 ### Properties
 
-- [aliases](/CommandMetadata/#aliases)
-- [arguments](/CommandMetadata/#arguments)
-- [botPermissions](/CommandMetadata/#botpermissions)
-- [category](/CommandMetadata/#category)
-- [description](/CommandMetadata/#description)
-- [detailed](/CommandMetadata/#detailed)
-- [examples](/CommandMetadata/#examples)
-- [guildOnly](/CommandMetadata/#guildonly)
-- [interaction](/CommandMetadata/#interaction)
-- [name](/CommandMetadata/#name)
-- [permissions](/CommandMetadata/#permissions)
+- [aliases](/commandmetadata/#aliases)
+- [arguments](/commandmetadata/#arguments)
+- [botPermissions](/commandmetadata/#botpermissions)
+- [category](/commandmetadata/#category)
+- [description](/commandmetadata/#description)
+- [detailed](/commandmetadata/#detailed)
+- [examples](/commandmetadata/#examples)
+- [guildOnly](/commandmetadata/#guildonly)
+- [interaction](/commandmetadata/#interaction)
+- [name](/commandmetadata/#name)
+- [permissions](/commandmetadata/#permissions)
 
 ## Properties
 
@@ -35,19 +35,19 @@ Aliases of the command.
 
 #### Defined in
 
-[command.ts:148](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L148)
+[command.ts:148](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L148)
 
 ___
 
 ### arguments
 
-• `Readonly` **arguments**: [`Argument`](/Argument/)[]
+• `Readonly` **arguments**: [`Argument`](/argument/)[]
 
 Interaction arguments
 
 #### Defined in
 
-[command.ts:178](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L178)
+[command.ts:178](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L178)
 
 ___
 
@@ -59,7 +59,7 @@ Permissions the bot needs as human readable.
 
 #### Defined in
 
-[command.ts:188](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L188)
+[command.ts:188](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L188)
 
 ___
 
@@ -71,7 +71,7 @@ Category the command is in.
 
 #### Defined in
 
-[command.ts:153](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L153)
+[command.ts:153](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L153)
 
 ___
 
@@ -83,7 +83,7 @@ Short description of the command.
 
 #### Defined in
 
-[command.ts:143](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L143)
+[command.ts:143](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L143)
 
 ___
 
@@ -95,7 +95,7 @@ Detailed description of the command.
 
 #### Defined in
 
-[command.ts:158](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L158)
+[command.ts:158](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L158)
 
 ___
 
@@ -107,7 +107,7 @@ Examples of the command in use.
 
 #### Defined in
 
-[command.ts:163](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L163)
+[command.ts:163](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L163)
 
 ___
 
@@ -119,7 +119,7 @@ If the command is available only in guilds.
 
 #### Defined in
 
-[command.ts:168](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L168)
+[command.ts:168](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L168)
 
 ___
 
@@ -131,7 +131,7 @@ Whether the command is suitable to be a message interaction.
 
 #### Defined in
 
-[command.ts:173](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L173)
+[command.ts:173](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L173)
 
 ___
 
@@ -143,7 +143,7 @@ Name of the command.
 
 #### Defined in
 
-[command.ts:138](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L138)
+[command.ts:138](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L138)
 
 ___
 
@@ -155,4 +155,4 @@ Permissions needed to use the command as human readable.
 
 #### Defined in
 
-[command.ts:183](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L183)
+[command.ts:183](https://github.com/EpokTarren/mashu/blob/78d8416/src/command.ts#L183)

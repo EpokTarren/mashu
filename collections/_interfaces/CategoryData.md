@@ -3,7 +3,7 @@ title: CategoryData
 layout: default
 permalink: /categorydata/
 ---
-[mashujs](/) / [Exports](/modules/) / CategoryData
+[mashujs](/readme/) / [Exports](/modules/) / CategoryData
 
 # Interface: CategoryData
 
@@ -13,8 +13,8 @@ Description and commands names of a category.
 
 ### Properties
 
-- [commands](/CategoryData/#commands)
-- [description](/CategoryData/#description)
+- [commands](/categorydata/#commands)
+- [description](/categorydata/#description)
 
 ## Properties
 
@@ -24,7 +24,7 @@ Description and commands names of a category.
 
 #### Defined in
 
-[handler.ts:53](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L53)
+[handler.ts:53](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L53)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[handler.ts:52](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L52)
+[handler.ts:52](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L52)

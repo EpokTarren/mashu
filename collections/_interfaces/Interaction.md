@@ -3,7 +3,7 @@ title: Interaction
 layout: default
 permalink: /interaction/
 ---
-[mashujs](/) / [Exports](/modules/) / Interaction
+[mashujs](/readme/) / [Exports](/modules/) / Interaction
 
 # Interface: Interaction
 
@@ -19,8 +19,8 @@ An interaction emitted by the command handler.
 
 ### Properties
 
-- [channel](/Interaction/#channel)
-- [client](/Interaction/#client)
+- [channel](/interaction/#channel)
+- [client](/interaction/#client)
 
 ## Properties
 
@@ -34,13 +34,13 @@ Discord.CommandInteraction.channel
 
 #### Defined in
 
-[client.ts:76](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/client.ts#L76)
+[client.ts:76](https://github.com/EpokTarren/mashu/blob/78d8416/src/client.ts#L76)
 
 ___
 
 ### client
 
-• **client**: [`Client`](/Client/)
+• **client**: [`Client`](/client/)
 
 The client that emitted the message.
 
@@ -50,4 +50,4 @@ Discord.CommandInteraction.client
 
 #### Defined in
 
-[client.ts:75](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/client.ts#L75)
+[client.ts:75](https://github.com/EpokTarren/mashu/blob/78d8416/src/client.ts#L75)

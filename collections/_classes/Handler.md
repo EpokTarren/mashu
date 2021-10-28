@@ -3,7 +3,7 @@ title: Handler
 layout: default
 permalink: /handler/
 ---
-[mashujs](/) / [Exports](/modules/) / Handler
+[mashujs](/readme/) / [Exports](/modules/) / Handler
 
 # Class: Handler
 
@@ -13,32 +13,32 @@ Command handler.
 
 - **`Handler`**
 
-  ↳ [`Documentation`](/Documentation/)
+  ↳ [`Documentation`](/documentation/)
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](/Handler/#constructor)
+- [constructor](/handler/#constructor)
 
 ### Properties
 
-- [categories](/Handler/#categories)
-- [client](/Handler/#client)
-- [errorChannel](/Handler/#errorchannel)
-- [help](/Handler/#help)
-- [prefix](/Handler/#prefix)
+- [categories](/handler/#categories)
+- [client](/handler/#client)
+- [errorChannel](/handler/#errorchannel)
+- [help](/handler/#help)
+- [prefix](/handler/#prefix)
 
 ### Methods
 
-- [getCommand](/Handler/#getcommand)
-- [handle](/Handler/#handle)
-- [handleInteraction](/Handler/#handleinteraction)
-- [isOwner](/Handler/#isowner)
-- [loadSlashCommands](/Handler/#loadslashcommands)
-- [reloadAll](/Handler/#reloadall)
-- [reloadCommand](/Handler/#reloadcommand)
-- [reportError](/Handler/#reporterror)
+- [getCommand](/handler/#getcommand)
+- [handle](/handler/#handle)
+- [handleInteraction](/handler/#handleinteraction)
+- [isOwner](/handler/#isowner)
+- [loadSlashCommands](/handler/#loadslashcommands)
+- [reloadAll](/handler/#reloadall)
+- [reloadCommand](/handler/#reloadcommand)
+- [reportError](/handler/#reporterror)
 
 ## Constructors
 
@@ -52,36 +52,36 @@ Constructs a handler instance.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `__namedParameters` | [`HandlerOptions`](/HandlerOptions/) | - |
+| `__namedParameters` | [`HandlerOptions`](/handleroptions/) | - |
 | `client` | `Client`<`boolean`\> | Client that the handler will attach to. |
 
 #### Defined in
 
-[handler.ts:479](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L479)
+[handler.ts:479](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L479)
 
 ## Properties
 
 ### categories
 
-• `Readonly` **categories**: `Map`<`string`, [`CategoryData`](/CategoryData/)\>
+• `Readonly` **categories**: `Map`<`string`, [`CategoryData`](/categorydata/)\>
 
 A map of categories and their metadata.
 
 #### Defined in
 
-[handler.ts:95](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L95)
+[handler.ts:95](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L95)
 
 ___
 
 ### client
 
-• `Readonly` **client**: [`Client`](/Client/)
+• `Readonly` **client**: [`Client`](/client/)
 
 The client the handler is attached to.
 
 #### Defined in
 
-[handler.ts:73](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L73)
+[handler.ts:73](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L73)
 
 ___
 
@@ -93,7 +93,7 @@ The channel to which the bot errors.
 
 #### Defined in
 
-[handler.ts:78](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L78)
+[handler.ts:78](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L78)
 
 ___
 
@@ -105,7 +105,7 @@ Help data.
 
 #### Defined in
 
-[handler.ts:68](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L68)
+[handler.ts:68](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L68)
 
 ___
 
@@ -117,13 +117,13 @@ Prefix that the handler uses.
 
 #### Defined in
 
-[handler.ts:63](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L63)
+[handler.ts:63](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L63)
 
 ## Methods
 
 ### getCommand
 
-▸ **getCommand**(`alias`): `undefined` \| [`Command`](/Command/)
+▸ **getCommand**(`alias`): `undefined` \| [`Command`](/command/)
 
 Gets a command by name or alias.
 
@@ -135,13 +135,13 @@ Gets a command by name or alias.
 
 #### Returns
 
-`undefined` \| [`Command`](/Command/)
+`undefined` \| [`Command`](/command/)
 
 A command.
 
 #### Defined in
 
-[handler.ts:193](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L193)
+[handler.ts:193](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L193)
 
 ___
 
@@ -163,7 +163,7 @@ Runs a command if the message contains a command.
 
 #### Defined in
 
-[handler.ts:202](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L202)
+[handler.ts:202](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L202)
 
 ___
 
@@ -185,7 +185,7 @@ Runs a command if the message contains a command.
 
 #### Defined in
 
-[handler.ts:435](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L435)
+[handler.ts:435](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L435)
 
 ___
 
@@ -209,7 +209,7 @@ Whether a user is an owner.
 
 #### Defined in
 
-[handler.ts:371](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L371)
+[handler.ts:371](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L371)
 
 ___
 
@@ -238,7 +238,7 @@ client.once('ready', () => {
 
 #### Defined in
 
-[handler.ts:388](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L388)
+[handler.ts:388](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L388)
 
 ___
 
@@ -254,7 +254,7 @@ Reloads all commands
 
 #### Defined in
 
-[handler.ts:161](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L161)
+[handler.ts:161](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L161)
 
 ___
 
@@ -278,7 +278,7 @@ whether a command was reloaded or not.
 
 #### Defined in
 
-[handler.ts:182](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L182)
+[handler.ts:182](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L182)
 
 ___
 
@@ -300,4 +300,4 @@ Reports an error to the set error channel.
 
 #### Defined in
 
-[handler.ts:357](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L357)
+[handler.ts:357](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L357)

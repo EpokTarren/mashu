@@ -3,7 +3,7 @@ title: Documentation
 layout: default
 permalink: /documentation/
 ---
-[mashujs](/) / [Exports](/modules/) / Documentation
+[mashujs](/readme/) / [Exports](/modules/) / Documentation
 
 # Class: Documentation
 
@@ -24,7 +24,7 @@ docs.exportDocs({
 
 ## Hierarchy
 
-- [`Handler`](/Handler/)
+- [`Handler`](/handler/)
 
   ↳ **`Documentation`**
 
@@ -32,30 +32,30 @@ docs.exportDocs({
 
 ### Constructors
 
-- [constructor](/Documentation/#constructor)
+- [constructor](/documentation/#constructor)
 
 ### Properties
 
-- [categories](/Documentation/#categories)
-- [categoryMetadata](/Documentation/#categorymetadata)
-- [client](/Documentation/#client)
-- [errorChannel](/Documentation/#errorchannel)
-- [help](/Documentation/#help)
-- [prefix](/Documentation/#prefix)
+- [categories](/documentation/#categories)
+- [categoryMetadata](/documentation/#categorymetadata)
+- [client](/documentation/#client)
+- [errorChannel](/documentation/#errorchannel)
+- [help](/documentation/#help)
+- [prefix](/documentation/#prefix)
 
 ### Methods
 
-- [commandMarkdown](/Documentation/#commandmarkdown)
-- [exportDocs](/Documentation/#exportdocs)
-- [getCommand](/Documentation/#getcommand)
-- [handle](/Documentation/#handle)
-- [handleInteraction](/Documentation/#handleinteraction)
-- [isOwner](/Documentation/#isowner)
-- [loadSlashCommands](/Documentation/#loadslashcommands)
-- [markdown](/Documentation/#markdown)
-- [reloadAll](/Documentation/#reloadall)
-- [reloadCommand](/Documentation/#reloadcommand)
-- [reportError](/Documentation/#reporterror)
+- [commandMarkdown](/documentation/#commandmarkdown)
+- [exportDocs](/documentation/#exportdocs)
+- [getCommand](/documentation/#getcommand)
+- [handle](/documentation/#handle)
+- [handleInteraction](/documentation/#handleinteraction)
+- [isOwner](/documentation/#isowner)
+- [loadSlashCommands](/documentation/#loadslashcommands)
+- [markdown](/documentation/#markdown)
+- [reloadAll](/documentation/#reloadall)
+- [reloadCommand](/documentation/#reloadcommand)
+- [reportError](/documentation/#reporterror)
 
 ## Constructors
 
@@ -78,59 +78,59 @@ const docs = new Documentation({
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options` | [`HandlerOptions`](/HandlerOptions/) | Handler initialization options |
+| `options` | [`HandlerOptions`](/handleroptions/) | Handler initialization options |
 
 #### Overrides
 
-[Handler](/Handler/).[constructor](/Handler/#constructor)
+[Handler](/handler/).[constructor](/handler/#constructor)
 
 #### Defined in
 
-[documentation.ts:280](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L280)
+[documentation.ts:280](https://github.com/EpokTarren/mashu/blob/78d8416/src/documentation.ts#L280)
 
 ## Properties
 
 ### categories
 
-• `Readonly` **categories**: `Map`<`string`, [`CategoryData`](/CategoryData/)\>
+• `Readonly` **categories**: `Map`<`string`, [`CategoryData`](/categorydata/)\>
 
 A map of categories and their metadata.
 
 #### Inherited from
 
-[Handler](/Handler/).[categories](/Handler/#categories)
+[Handler](/handler/).[categories](/handler/#categories)
 
 #### Defined in
 
-[handler.ts:95](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L95)
+[handler.ts:95](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L95)
 
 ___
 
 ### categoryMetadata
 
-• `Readonly` **categoryMetadata**: [`CommandCategory`](/CommandCategory/)[]
+• `Readonly` **categoryMetadata**: [`CommandCategory`](/commandcategory/)[]
 
 Metadata for all categories sorted by name.
 
 #### Defined in
 
-[documentation.ts:138](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L138)
+[documentation.ts:138](https://github.com/EpokTarren/mashu/blob/78d8416/src/documentation.ts#L138)
 
 ___
 
 ### client
 
-• `Readonly` **client**: [`Client`](/Client/)
+• `Readonly` **client**: [`Client`](/client/)
 
 The client the handler is attached to.
 
 #### Inherited from
 
-[Handler](/Handler/).[client](/Handler/#client)
+[Handler](/handler/).[client](/handler/#client)
 
 #### Defined in
 
-[handler.ts:73](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L73)
+[handler.ts:73](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L73)
 
 ___
 
@@ -142,11 +142,11 @@ The channel to which the bot errors.
 
 #### Inherited from
 
-[Handler](/Handler/).[errorChannel](/Handler/#errorchannel)
+[Handler](/handler/).[errorChannel](/handler/#errorchannel)
 
 #### Defined in
 
-[handler.ts:78](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L78)
+[handler.ts:78](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L78)
 
 ___
 
@@ -158,11 +158,11 @@ Help data.
 
 #### Inherited from
 
-[Handler](/Handler/).[help](/Handler/#help)
+[Handler](/handler/).[help](/handler/#help)
 
 #### Defined in
 
-[handler.ts:68](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L68)
+[handler.ts:68](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L68)
 
 ___
 
@@ -174,11 +174,11 @@ Prefix that the handler uses.
 
 #### Inherited from
 
-[Handler](/Handler/).[prefix](/Handler/#prefix)
+[Handler](/handler/).[prefix](/handler/#prefix)
 
 #### Defined in
 
-[handler.ts:63](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L63)
+[handler.ts:63](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L63)
 
 ## Methods
 
@@ -192,7 +192,7 @@ Generate markdown for a command.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `command` | [`CommandMetadata`](/CommandMetadata/) | The command to convert to markdown. |
+| `command` | [`CommandMetadata`](/commandmetadata/) | The command to convert to markdown. |
 
 #### Returns
 
@@ -202,7 +202,7 @@ The metadata of a command as markdown.
 
 #### Defined in
 
-[documentation.ts:145](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L145)
+[documentation.ts:145](https://github.com/EpokTarren/mashu/blob/78d8416/src/documentation.ts#L145)
 
 ___
 
@@ -234,7 +234,7 @@ docs.exportDocs({
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options` | [`MashuDocOptions`](/MashuDocOptions/) | The options for how and where to export to. |
+| `options` | [`MashuDocOptions`](/mashudocoptions/) | The options for how and where to export to. |
 
 #### Returns
 
@@ -242,13 +242,13 @@ docs.exportDocs({
 
 #### Defined in
 
-[documentation.ts:247](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L247)
+[documentation.ts:247](https://github.com/EpokTarren/mashu/blob/78d8416/src/documentation.ts#L247)
 
 ___
 
 ### getCommand
 
-▸ **getCommand**(`alias`): `undefined` \| [`Command`](/Command/)
+▸ **getCommand**(`alias`): `undefined` \| [`Command`](/command/)
 
 Gets a command by name or alias.
 
@@ -260,17 +260,17 @@ Gets a command by name or alias.
 
 #### Returns
 
-`undefined` \| [`Command`](/Command/)
+`undefined` \| [`Command`](/command/)
 
 A command.
 
 #### Inherited from
 
-[Handler](/Handler/).[getCommand](/Handler/#getcommand)
+[Handler](/handler/).[getCommand](/handler/#getcommand)
 
 #### Defined in
 
-[handler.ts:193](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L193)
+[handler.ts:193](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L193)
 
 ___
 
@@ -292,11 +292,11 @@ Runs a command if the message contains a command.
 
 #### Inherited from
 
-[Handler](/Handler/).[handle](/Handler/#handle)
+[Handler](/handler/).[handle](/handler/#handle)
 
 #### Defined in
 
-[handler.ts:202](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L202)
+[handler.ts:202](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L202)
 
 ___
 
@@ -318,11 +318,11 @@ Runs a command if the message contains a command.
 
 #### Inherited from
 
-[Handler](/Handler/).[handleInteraction](/Handler/#handleinteraction)
+[Handler](/handler/).[handleInteraction](/handler/#handleinteraction)
 
 #### Defined in
 
-[handler.ts:435](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L435)
+[handler.ts:435](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L435)
 
 ___
 
@@ -346,11 +346,11 @@ Whether a user is an owner.
 
 #### Inherited from
 
-[Handler](/Handler/).[isOwner](/Handler/#isowner)
+[Handler](/handler/).[isOwner](/handler/#isowner)
 
 #### Defined in
 
-[handler.ts:371](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L371)
+[handler.ts:371](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L371)
 
 ___
 
@@ -379,11 +379,11 @@ client.once('ready', () => {
 
 #### Inherited from
 
-[Handler](/Handler/).[loadSlashCommands](/Handler/#loadslashcommands)
+[Handler](/handler/).[loadSlashCommands](/handler/#loadslashcommands)
 
 #### Defined in
 
-[handler.ts:388](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L388)
+[handler.ts:388](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L388)
 
 ___
 
@@ -418,7 +418,7 @@ docs
 | :------ | :------ | :------ | :------ |
 | `inlineTitle` | `boolean` | `true` | Whether to include command category titles. |
 | `toc` | `boolean` | `true` | Whether to include a table of contents |
-| `options` | [`MarkdownOptions`](/MarkdownOptions/) | `{}` | Options for exporting command categories to markdown. |
+| `options` | [`MarkdownOptions`](/markdownoptions/) | `{}` | Options for exporting command categories to markdown. |
 
 #### Returns
 
@@ -428,7 +428,7 @@ A markdown representation of each command category.
 
 #### Defined in
 
-[documentation.ts:194](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L194)
+[documentation.ts:194](https://github.com/EpokTarren/mashu/blob/78d8416/src/documentation.ts#L194)
 
 ___
 
@@ -444,11 +444,11 @@ Reloads all commands
 
 #### Inherited from
 
-[Handler](/Handler/).[reloadAll](/Handler/#reloadall)
+[Handler](/handler/).[reloadAll](/handler/#reloadall)
 
 #### Defined in
 
-[handler.ts:161](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L161)
+[handler.ts:161](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L161)
 
 ___
 
@@ -472,11 +472,11 @@ whether a command was reloaded or not.
 
 #### Inherited from
 
-[Handler](/Handler/).[reloadCommand](/Handler/#reloadcommand)
+[Handler](/handler/).[reloadCommand](/handler/#reloadcommand)
 
 #### Defined in
 
-[handler.ts:182](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L182)
+[handler.ts:182](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L182)
 
 ___
 
@@ -498,8 +498,8 @@ Reports an error to the set error channel.
 
 #### Inherited from
 
-[Handler](/Handler/).[reportError](/Handler/#reporterror)
+[Handler](/handler/).[reportError](/handler/#reporterror)
 
 #### Defined in
 
-[handler.ts:357](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/handler.ts#L357)
+[handler.ts:357](https://github.com/EpokTarren/mashu/blob/78d8416/src/handler.ts#L357)

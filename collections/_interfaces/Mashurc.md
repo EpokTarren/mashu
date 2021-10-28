@@ -3,7 +3,7 @@ title: Mashurc
 layout: default
 permalink: /mashurc/
 ---
-[mashujs](/) / [Exports](/modules/) / Mashurc
+[mashujs](/readme/) / [Exports](/modules/) / Mashurc
 
 # Interface: Mashurc
 
@@ -11,7 +11,7 @@ Documentation cli export config options.
 
 ## Hierarchy
 
-- [`MashuDocOptions`](/MashuDocOptions/)
+- [`MashuDocOptions`](/mashudocoptions/)
 
   ↳ **`Mashurc`**
 
@@ -19,17 +19,17 @@ Documentation cli export config options.
 
 ### Properties
 
-- [$schema](/Mashurc/#$schema)
-- [descriptionReplacer](/Mashurc/#descriptionreplacer)
-- [descriptions](/Mashurc/#descriptions)
-- [homeHeader](/Mashurc/#homeheader)
-- [input](/Mashurc/#input)
-- [layout](/Mashurc/#layout)
-- [output](/Mashurc/#output)
-- [permalink](/Mashurc/#permalink)
-- [prefix](/Mashurc/#prefix)
-- [readme](/Mashurc/#readme)
-- [titles](/Mashurc/#titles)
+- [$schema](/mashurc/#$schema)
+- [descriptionReplacer](/mashurc/#descriptionreplacer)
+- [descriptions](/mashurc/#descriptions)
+- [homeHeader](/mashurc/#homeheader)
+- [input](/mashurc/#input)
+- [layout](/mashurc/#layout)
+- [output](/mashurc/#output)
+- [permalink](/mashurc/#permalink)
+- [prefix](/mashurc/#prefix)
+- [readme](/mashurc/#readme)
+- [titles](/mashurc/#titles)
 
 ## Properties
 
@@ -41,7 +41,7 @@ Path to the json schema.
 
 #### Defined in
 
-[documentation.ts:114](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L114)
+[documentation.ts:114](https://github.com/EpokTarren/mashu/blob/78d8416/src/documentation.ts#L114)
 
 ___
 
@@ -60,7 +60,7 @@ Replacer for descriptions, replaces the first value with the second value in cat
 
 #### Defined in
 
-[documentation.ts:110](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L110)
+[documentation.ts:110](https://github.com/EpokTarren/mashu/blob/78d8416/src/documentation.ts#L110)
 
 ___
 
@@ -72,11 +72,11 @@ Whether to include the description of a category underneath the title.
 
 #### Inherited from
 
-[MashuDocOptions](/MashuDocOptions/).[descriptions](/MashuDocOptions/#descriptions)
+[MashuDocOptions](/mashudocoptions/).[descriptions](/mashudocoptions/#descriptions)
 
 #### Defined in
 
-[documentation.ts:56](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L56)
+[documentation.ts:56](https://github.com/EpokTarren/mashu/blob/78d8416/src/documentation.ts#L56)
 
 ___
 
@@ -88,11 +88,11 @@ Header for readme if exported.
 
 #### Inherited from
 
-[MashuDocOptions](/MashuDocOptions/).[homeHeader](/MashuDocOptions/#homeheader)
+[MashuDocOptions](/mashudocoptions/).[homeHeader](/mashudocoptions/#homeheader)
 
 #### Defined in
 
-[documentation.ts:86](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L86)
+[documentation.ts:86](https://github.com/EpokTarren/mashu/blob/78d8416/src/documentation.ts#L86)
 
 ___
 
@@ -104,7 +104,7 @@ Input folder with commands to parse.
 
 #### Defined in
 
-[documentation.ts:100](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L100)
+[documentation.ts:100](https://github.com/EpokTarren/mashu/blob/78d8416/src/documentation.ts#L100)
 
 ___
 
@@ -125,11 +125,11 @@ docs.markdown(true, true, { layout: 'category' });
 
 #### Inherited from
 
-[MashuDocOptions](/MashuDocOptions/).[layout](/MashuDocOptions/#layout)
+[MashuDocOptions](/mashudocoptions/).[layout](/mashudocoptions/#layout)
 
 #### Defined in
 
-[documentation.ts:68](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L68)
+[documentation.ts:68](https://github.com/EpokTarren/mashu/blob/78d8416/src/documentation.ts#L68)
 
 ___
 
@@ -141,11 +141,11 @@ Output directory for the documentation.
 
 #### Inherited from
 
-[MashuDocOptions](/MashuDocOptions/).[output](/MashuDocOptions/#output)
+[MashuDocOptions](/mashudocoptions/).[output](/mashudocoptions/#output)
 
 #### Defined in
 
-[documentation.ts:78](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L78)
+[documentation.ts:78](https://github.com/EpokTarren/mashu/blob/78d8416/src/documentation.ts#L78)
 
 ___
 
@@ -166,11 +166,11 @@ docs.markdown(true, true, { permalink: true });
 
 #### Inherited from
 
-[MashuDocOptions](/MashuDocOptions/).[permalink](/MashuDocOptions/#permalink)
+[MashuDocOptions](/mashudocoptions/).[permalink](/mashudocoptions/#permalink)
 
 #### Defined in
 
-[documentation.ts:52](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L52)
+[documentation.ts:52](https://github.com/EpokTarren/mashu/blob/78d8416/src/documentation.ts#L52)
 
 ___
 
@@ -182,7 +182,7 @@ Prefix to be used in example generation.
 
 #### Defined in
 
-[documentation.ts:96](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L96)
+[documentation.ts:96](https://github.com/EpokTarren/mashu/blob/78d8416/src/documentation.ts#L96)
 
 ___
 
@@ -194,11 +194,11 @@ Readme text to export as index.md.
 
 #### Inherited from
 
-[MashuDocOptions](/MashuDocOptions/).[readme](/MashuDocOptions/#readme)
+[MashuDocOptions](/mashudocoptions/).[readme](/mashudocoptions/#readme)
 
 #### Defined in
 
-[documentation.ts:82](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L82)
+[documentation.ts:82](https://github.com/EpokTarren/mashu/blob/78d8416/src/documentation.ts#L82)
 
 ___
 
@@ -219,8 +219,8 @@ docs.markdown(true, true, { titles: true });
 
 #### Inherited from
 
-[MashuDocOptions](/MashuDocOptions/).[titles](/MashuDocOptions/#titles)
+[MashuDocOptions](/mashudocoptions/).[titles](/mashudocoptions/#titles)
 
 #### Defined in
 
-[documentation.ts:40](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L40)
+[documentation.ts:40](https://github.com/EpokTarren/mashu/blob/78d8416/src/documentation.ts#L40)

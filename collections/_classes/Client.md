@@ -3,7 +3,7 @@ title: Client
 layout: default
 permalink: /client/
 ---
-[mashujs](/) / [Exports](/modules/) / Client
+[mashujs](/readme/) / [Exports](/modules/) / Client
 
 # Class: Client
 
@@ -19,15 +19,15 @@ Client connected to the Discord api.
 
 ### Constructors
 
-- [constructor](/Client/#constructor)
+- [constructor](/client/#constructor)
 
 ### Properties
 
-- [handler](/Client/#handler)
+- [handler](/client/#handler)
 
 ### Methods
 
-- [loadSlashCommands](/Client/#loadslashcommands)
+- [loadSlashCommands](/client/#loadslashcommands)
 
 ## Constructors
 
@@ -49,19 +49,19 @@ Discord.Client.constructor
 
 #### Defined in
 
-[client.ts:30](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/client.ts#L30)
+[client.ts:30](https://github.com/EpokTarren/mashu/blob/78d8416/src/client.ts#L30)
 
 ## Properties
 
 ### handler
 
-• `Readonly` **handler**: [`Handler`](/Handler/)
+• `Readonly` **handler**: [`Handler`](/handler/)
 
 The command handler that handles messages.
 
 #### Defined in
 
-[client.ts:16](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/client.ts#L16)
+[client.ts:16](https://github.com/EpokTarren/mashu/blob/78d8416/src/client.ts#L16)
 
 ## Methods
 
@@ -83,4 +83,4 @@ Init slash commands
 
 #### Defined in
 
-[client.ts:22](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/client.ts#L22)
+[client.ts:22](https://github.com/EpokTarren/mashu/blob/78d8416/src/client.ts#L22)
