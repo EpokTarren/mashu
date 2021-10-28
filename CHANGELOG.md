@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 2.0.1
+
+Slash command improvements.
+
+### Added
+
+- When testing commands, you may set `process.env.MASHUDEBUGGUILD` so that commands are only registered in your test guild.
+
+### Changed
+
+- Registering slash commands no longer needs a token passed in.
+- @discordjs/builders, @discordjs/rest, and discord-api-types are no longer required.
+
+### Removed
+
+- Superfluous console logs when each command loads.
+
 ## 2.0.0
 
 discord.js v13 migration and slash command support.
