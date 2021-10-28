@@ -1,21 +1,15 @@
 import { resolve } from 'path';
 import { readdirSync, lstatSync, existsSync, readFileSync } from 'fs';
-
 import * as Discord from 'discord.js';
-import { REST } from '@discordjs/rest';
-import { Routes } from 'discord-api-types/v9';
-import { SlashCommandBuilder } from '@discordjs/builders';
-import { ApplicationCommandOptionWithChoicesBase } from '@discordjs/builders/dist/interactions/slashCommands/mixins/CommandOptionWithChoices';
-
 import { Client, Message, Interaction, IntractableMessage } from './client';
-import { Command, InteractionCommand, Argument, IntractableCommand, MessageCommand } from './command';
+import { Command, InteractionCommand, IntractableCommand, MessageCommand } from './command';
 
 /**
  * Options for initializing a handler.
  */
 export interface HandlerOptions {
 	/**
-	 * Directory containing commands or subfolders with commands.
+	 * Directory containing commands or sub folders with commands.
 	 */
 	dir: string;
 
@@ -333,7 +327,7 @@ export class Handler {
 					embeds: [
 						{
 							title: 'Incorrect command usage.',
-							description: error.message || error,
+							description: (error as Error).message || (error as string),
 							color: Number(process.env.MASHUERRORCOLOR) || 0xff8080,
 						},
 					],
@@ -382,11 +376,17 @@ export class Handler {
 
 	/**
 	 * Init slash commands
-	 * @param token - Your login token
+	 * @param token - Deprecated: Your login token
+	 * @example
+	 * ```ts
+	 * client.once('ready', () => {
+	 * 	client.handler.loadSlashCommands();
+	 * })
+	 * ```
 	 */
-	public async loadSlashCommands(token: string): Promise<void> {
-		if (!this.client?.user?.id) throw new Error('No client id available.');
-		if (!token) throw new Error('No token available.');
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	public async loadSlashCommands(token?: string): Promise<void> {
+		if (!this.client?.application?.commands?.create) throw new Error('No client available.');
 
 		const commands = Array.from(this.commands)
 			.filter(([, command]) => command.interaction !== 'off')
@@ -401,56 +401,31 @@ export class Handler {
 
 		commands.forEach(([internalName, name]) => this.slashCommandAliases.set(internalName, name));
 
-		const rest = new REST({ version: '9' }).setToken(token);
+		const commandData = commands.reduce((acc, [, name, command]) => {
+			return acc.concat({
+				name,
+				description: command.description,
+				type: 'CHAT_INPUT',
+				options:
+					command.arguments?.[0] &&
+					command.arguments.map(({ name, description, required, choices, type }) => ({
+						name,
+						description,
+						required,
+						choices: choices?.[0] ? choices.map(({ name, value }) => ({ name, value })) : undefined,
+						/**
+						 * When in upper cased it is equivalent to the below type,
+						 * which is a subset of Discord.CommandOptionChoiceResolvableType
+						 * 'NUMBER' | 'STRING' | 'INTEGER' | 'CHANNEL' | 'USER' | 'BOOLEAN' | 'ROLE' | 'MENTIONABLE'
+						 */
+						type: (type.toUpperCase() as unknown) as Discord.CommandOptionChoiceResolvableType,
+					})),
+			});
+		}, [] as Discord.ApplicationCommandData[]);
 
-		const typeToMethodName: Record<
-			Argument['type'],
-			| 'addBooleanOption'
-			| 'addChannelOption'
-			| 'addIntegerOption'
-			| 'addMentionableOption'
-			| 'addRoleOption'
-			| 'addStringOption'
-			| 'addUserOption'
-		> = {
-			Boolean: 'addBooleanOption',
-			Channel: 'addChannelOption',
-			Integer: 'addIntegerOption',
-			Mentionable: 'addMentionableOption',
-			Role: 'addRoleOption',
-			String: 'addStringOption',
-			User: 'addUserOption',
-		};
-
-		const body: SlashCommandBuilder[] = commands.map(([, name, command]) => {
-			const slash = new SlashCommandBuilder().setName(name).setDescription(command.description);
-
-			for (const argument of command.arguments)
-				slash[typeToMethodName[argument.type]](
-					/*
-					 * TypeScript cannot deduce a type implicitly but will error when a type is provided.
-					 * The deduced type still exists in the error message and is too large for practical use.
-					 * All the types have setName, setDescription, and setRequired, but not all have addChoice.
-					 * Hence there is a check to make sure addChoice exists before calling the function.
-					 */
-					// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-					// @ts-expect-error
-					(option: ApplicationCommandOptionWithChoicesBase<string | number>) => {
-						option.setName(argument.name).setDescription(argument.description).setRequired(!!argument.required);
-						option.addChoice && argument.choices?.forEach(({ name, value }) => option.addChoice(name, value));
-						return option;
-					}
-				);
-
-			return slash;
-		});
-
-		/*
-		 * This shouldn't need to be casted this way, my IDE thinks the types are fine,
-		 * I know this is the intended way to use this function see example usage https://discord.js.org/#/docs/main/13.1.0/general/welcome,
-		 * Yet when compiling it throws a type error, I hate this, I shouldn't have to write code like this, this sucks.
-		 */
-		await rest.put((Routes.applicationCommands(this.client.user.id) as unknown) as '/${string}', { body });
+		if (process.env.MASHUDEBUGGUILD)
+			await this.client.application?.commands?.set(commandData, process.env.MASHUDEBUGGUILD);
+		else await this.client.application?.commands?.set(commandData);
 	}
 
 	/**
@@ -507,8 +482,9 @@ export class Handler {
 	) {
 		((client as unknown) as { handler: Handler }).handler = this;
 		this.client = client as Client;
-		this.client.on?.('messageCreate', this.handle.bind(this));
-		this.client.on?.('interactionCreate', this.handleInteraction.bind(this));
+		this.client
+			.on?.('messageCreate', this.handle.bind(this))
+			.on('interactionCreate', this.handleInteraction.bind(this));
 
 		this.options = { prefix, dir, enableHelp, errorChannel, owners, descriptionReplacer };
 
