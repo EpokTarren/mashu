@@ -155,7 +155,7 @@ export class Documentation extends Handler {
 						(acc, { name, required, type, description }) =>
 							`${acc}#### ${name}(${
 								required ? 'Required ' : 'Optional'
-							})\n\nType: ${type}\nDescription: ${description})\n`,
+							})\n\nType: ${type}\n\nDescription: ${description}\n`,
 						''
 				  )}`
 				: '',
