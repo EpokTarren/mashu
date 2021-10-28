@@ -27,7 +27,7 @@ The metadata of all commands.
 
 #### Defined in
 
-[documentation.ts:18](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L18)
+[documentation.ts:18](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L18)
 
 ___
 
@@ -39,7 +39,7 @@ The description of the category as a whole.
 
 #### Defined in
 
-[documentation.ts:22](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L22)
+[documentation.ts:22](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L22)
 
 ___
 
@@ -51,4 +51,4 @@ The name of the category.
 
 #### Defined in
 
-[documentation.ts:14](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L14)
+[documentation.ts:14](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L14)

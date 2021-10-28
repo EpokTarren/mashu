@@ -25,7 +25,7 @@ permalink: /argument/
 
 #### Defined in
 
-[command.ts:16](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L16)
+[command.ts:16](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L16)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[command.ts:13](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L13)
+[command.ts:13](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L13)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[command.ts:12](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L12)
+[command.ts:12](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L12)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[command.ts:15](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L15)
+[command.ts:15](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L15)
 
 ___
 
@@ -65,4 +65,4 @@ ___
 
 #### Defined in
 
-[command.ts:14](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L14)
+[command.ts:14](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L14)

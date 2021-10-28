@@ -41,7 +41,7 @@ Path to the json schema.
 
 #### Defined in
 
-[documentation.ts:114](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L114)
+[documentation.ts:114](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L114)
 
 ___
 
@@ -60,7 +60,7 @@ Replacer for descriptions, replaces the first value with the second value in cat
 
 #### Defined in
 
-[documentation.ts:110](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L110)
+[documentation.ts:110](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L110)
 
 ___
 
@@ -76,7 +76,7 @@ Whether to include the description of a category underneath the title.
 
 #### Defined in
 
-[documentation.ts:56](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L56)
+[documentation.ts:56](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L56)
 
 ___
 
@@ -92,7 +92,7 @@ Header for readme if exported.
 
 #### Defined in
 
-[documentation.ts:86](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L86)
+[documentation.ts:86](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L86)
 
 ___
 
@@ -104,7 +104,7 @@ Input folder with commands to parse.
 
 #### Defined in
 
-[documentation.ts:100](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L100)
+[documentation.ts:100](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L100)
 
 ___
 
@@ -129,7 +129,7 @@ docs.markdown(true, true, { layout: 'category' });
 
 #### Defined in
 
-[documentation.ts:68](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L68)
+[documentation.ts:68](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L68)
 
 ___
 
@@ -145,7 +145,7 @@ Output directory for the documentation.
 
 #### Defined in
 
-[documentation.ts:78](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L78)
+[documentation.ts:78](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L78)
 
 ___
 
@@ -170,7 +170,7 @@ docs.markdown(true, true, { permalink: true });
 
 #### Defined in
 
-[documentation.ts:52](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L52)
+[documentation.ts:52](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L52)
 
 ___
 
@@ -182,7 +182,7 @@ Prefix to be used in example generation.
 
 #### Defined in
 
-[documentation.ts:96](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L96)
+[documentation.ts:96](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L96)
 
 ___
 
@@ -198,7 +198,7 @@ Readme text to export as index.md.
 
 #### Defined in
 
-[documentation.ts:82](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L82)
+[documentation.ts:82](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L82)
 
 ___
 
@@ -223,4 +223,4 @@ docs.markdown(true, true, { titles: true });
 
 #### Defined in
 
-[documentation.ts:40](https://github.com/EpokTarren/mashu/blob/14d28f7/src/documentation.ts#L40)
+[documentation.ts:40](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/documentation.ts#L40)

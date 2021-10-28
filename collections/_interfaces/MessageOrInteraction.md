@@ -26,7 +26,7 @@ this is Interaction & MessageOrInteraction
 
 #### Defined in
 
-[client.ts:81](https://github.com/EpokTarren/mashu/blob/14d28f7/src/client.ts#L81)
+[client.ts:81](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/client.ts#L81)
 
 ___
 
@@ -40,4 +40,4 @@ this is Message & MessageOrInteraction
 
 #### Defined in
 
-[client.ts:80](https://github.com/EpokTarren/mashu/blob/14d28f7/src/client.ts#L80)
+[client.ts:80](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/client.ts#L80)

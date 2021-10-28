@@ -49,7 +49,7 @@ Aliases of the command.
 
 #### Defined in
 
-[command.ts:44](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L44)
+[command.ts:44](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L44)
 
 ___
 
@@ -61,7 +61,7 @@ Command arguments
 
 #### Defined in
 
-[command.ts:74](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L74)
+[command.ts:74](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L74)
 
 ___
 
@@ -73,7 +73,7 @@ Permissions the bot needs to execute the command.
 
 #### Defined in
 
-[command.ts:89](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L89)
+[command.ts:89](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L89)
 
 ___
 
@@ -85,7 +85,7 @@ Category the command is in.
 
 #### Defined in
 
-[command.ts:49](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L49)
+[command.ts:49](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L49)
 
 ___
 
@@ -97,7 +97,7 @@ Short description of the command.
 
 #### Defined in
 
-[command.ts:34](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L34)
+[command.ts:34](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L34)
 
 ___
 
@@ -109,7 +109,7 @@ Detailed description of the command.
 
 #### Defined in
 
-[command.ts:54](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L54)
+[command.ts:54](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L54)
 
 ___
 
@@ -121,7 +121,7 @@ Examples of the command in use.
 
 #### Defined in
 
-[command.ts:59](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L59)
+[command.ts:59](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L59)
 
 ___
 
@@ -133,7 +133,7 @@ If the command is available only in guilds.
 
 #### Defined in
 
-[command.ts:64](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L64)
+[command.ts:64](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L64)
 
 ___
 
@@ -145,7 +145,7 @@ Whether the command is hidden.
 
 #### Defined in
 
-[command.ts:39](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L39)
+[command.ts:39](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L39)
 
 ___
 
@@ -157,7 +157,7 @@ Whether the command is suitable to be a message interaction.
 
 #### Defined in
 
-[command.ts:69](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L69)
+[command.ts:69](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L69)
 
 ___
 
@@ -169,7 +169,7 @@ Name of the command.
 
 #### Defined in
 
-[command.ts:29](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L29)
+[command.ts:29](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L29)
 
 ___
 
@@ -181,7 +181,7 @@ Whether to parse arguments for plain message command invocations.
 
 #### Defined in
 
-[command.ts:79](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L79)
+[command.ts:79](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L79)
 
 ___
 
@@ -193,7 +193,7 @@ Permissions needed to use the command.
 
 #### Defined in
 
-[command.ts:84](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L84)
+[command.ts:84](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L84)
 
 ## Methods
 
@@ -216,4 +216,4 @@ Commands execution function.
 
 #### Defined in
 
-[command.ts:24](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L24)
+[command.ts:24](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L24)

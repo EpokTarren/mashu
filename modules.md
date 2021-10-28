@@ -53,7 +53,7 @@ layout: default
 
 #### Defined in
 
-[command.ts:9](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L9)
+[command.ts:9](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L9)
 
 ___
 
@@ -65,7 +65,7 @@ Options used to instantiate a client.
 
 #### Defined in
 
-[client.ts:7](https://github.com/EpokTarren/mashu/blob/14d28f7/src/client.ts#L7)
+[client.ts:7](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/client.ts#L7)
 
 ___
 
@@ -77,7 +77,7 @@ Resolvable to an example, either a string or a function that resolves to a strin
 
 #### Defined in
 
-[command.ts:7](https://github.com/EpokTarren/mashu/blob/14d28f7/src/command.ts#L7)
+[command.ts:7](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/command.ts#L7)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[client.ts:84](https://github.com/EpokTarren/mashu/blob/14d28f7/src/client.ts#L84)
+[client.ts:84](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/client.ts#L84)
 
 ## Functions
 
@@ -107,4 +107,4 @@ ___
 
 #### Defined in
 
-[client.ts:86](https://github.com/EpokTarren/mashu/blob/14d28f7/src/client.ts#L86)
+[client.ts:86](https://github.com/EpokTarren/mashu/blob/e9c6c72/src/client.ts#L86)
