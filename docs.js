@@ -6,6 +6,7 @@ const fixMD = (md) =>
 	md
 		.replace('./LICENSE', repoURL + '/blob/master/LICENSE')
 		.replace(/\.md(?=\)|#)/g, '/') // Remove .md from links
+		.replace(/\[.*?\]\(\/.*?\))/g, (match) => match.replace(/\(.*?\)/, (m) => m.toLowerCase())) // Lower case links in property list
 		.replace(/]\((?!http)/g, '](/') // Add leading slash for local links
 		.replace(/\.\.\//g, '') // Remove directory traversal
 		.replace(/(interfaces|classes)\/(?=[^\s]+\/\))/g, '') // Remove "classes/" and "interfaces/"
@@ -36,9 +37,6 @@ writeFileSync(
 );
 
 const readmePath = resolve(__dirname, 'docs', 'README.md');
-writeFileSync(
-	readmePath,
-	'---\ntitle: Home\nlayout: default\n---\n' + fixMD(readFileSync(readmePath).toString())
-);
+writeFileSync(readmePath, '---\ntitle: Home\nlayout: default\n---\n' + fixMD(readFileSync(readmePath).toString()));
 
 console.log('Docs generated.');
